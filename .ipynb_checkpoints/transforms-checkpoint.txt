@@ -1,0 +1,32 @@
+map/filter/reduce -> list comprehensions
+map(f, xs) -> [f(x) for x in xs]
+filter(f, xs) -> [x for x in xs if f(x)]
+y = reduce(f, xs, initial=next(iter(xs))) ->
+y = initial
+for x in xs:
+    y = f(y, x)
+** will not work if reduce is in the form f(reduce(x, xs)) **
+
+
+for x in xs:
+--- if xs is a list with pop(): ---
+while xs:
+    x = xs.pop(0)
+    ... x ...
+
+--- otherwise if x is an iterator ---
+xs_i = iter(xs)
+while True:
+    try:
+        x = next(xs_i)
+        ...x...
+    except StopIteration:
+        break
+
+variable substitutions: append '_var'
+
+comprehension unrolling:
+y = [x for x in xs] ->
+y = []
+for x in xs:
+    y.append(x)

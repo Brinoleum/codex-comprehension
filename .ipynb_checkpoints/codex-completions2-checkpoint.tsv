@@ -1,0 +1,1904 @@
+Sequence number	Sequence name	Sequence	Python code completion0	Python code completion1	Python code completion2	Python code completion3	Python code completion4	Obfuscation1 completion 0	Obfuscation1 completion 1	Obfuscation1 completion 2	Obfuscation1 completion 3	Obfuscation1 completion 4	Obfuscation2 completion 0	Obfuscation2 completion 1	Obfuscation2 completion 2	Obfuscation2 completion 3	Obfuscation2 completion 4	Obfuscation3 completion 0	Obfuscation3 completion 1	Obfuscation3 completion 2	Obfuscation3 completion 3	Obfuscation3 completion 4	Obfuscation4 completion 0	Obfuscation4 completion 1	Obfuscation4 completion 2	Obfuscation4 completion 3	Obfuscation4 completion 4	Obfuscation5 completion 0	Obfuscation5 completion 1	Obfuscation5 completion 2	Obfuscation5 completion 3	Obfuscation5 completion 4
+A000006	Integer part of square root of n-th prime.	1,1,2,2,3,3,4,4,4,5,5,6,6,6,6,7,7,7,8,8,8,8,9,9,9,10,10,10,10,10,11,11,11,11,12,12,12,12,12,13,13,13,13,13,14,14,14,14,15,15,15,15,15,15,16,16,16,16,16,16,16,17,17,17,17,17,18,18,18,18,18	"
+from sympy import sieve
+A000006 = lambda n: int(sieve[n]**.5)
+print([A000006(n) for n in range(1,100+1)])
+
+"	" the first 100 values of the golden ratio.
+
+'''"	" the n-th perfect square number, based on a list of the first 100 prime numbers.
+"""""""	" the prime numbers via a powerful module called sympy. See prior question below for reference.
+The above code uses list comprehension in conjunction with sieve's n-th element, which is related to the n-th prime number.
+
+        Dribble: The Fundamental Problem
+Problem:
+
+    Your team at Apple released a new feature for the Mac that automatically deletes duplicate files from your user's library. After it was put into production, however early one morning, 8 PM somebody changed"	" the first 100 numbers in the list A000006, which is a function that returns square roots of Fibonacci numbers. 
+""""""
+#What's Next?
+""""""I would like to attempt the topic ""Advanced Python."" Advanced Python topics include object-oriented programming and functional programming principles, among other topics. My resguide for these to topics can be found here: https://pine.fm/LearnUBC/full.html?course=ADVANCED_PYTH"
+A000042	Unary representation of natural numbers.	1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111,11111111111,111111111111,1111111111111,11111111111111,111111111111111,1111111111111111,11111111111111111,111111111111111111,1111111111111111111,11111111111111111111	" def a(n): return int(""1""*n) 
+"	" the n-th Fibonacci number through a one liner, described below:
+
+If n is 0, then return 0. If n is 1, then return 1. Otherwise, return n multiplied by 10 raised to the n-1'st power, where n-1 is equal to the n-1'th Fibonacci number.
+
+# Algorithm
+
+## Recursive solution
+
+Recursive solutions in a language like Python are generally fairly expensive computationally. However"	" a huge number, in base 1, where every digit is 1. This is useful for testing purposes, as you might guess.
+
+-----
+Task
+
+Complete the function fib() in the editor below so that it returns the n'th Fibonacci number from the definition above. Take some time to understand the link between this definition of Fibonacci and its implementation in the code cell above. Please note that in this implementation, a Fibonacci number is considered to be any positive"	" the n-digit string number equal to 1 through the following:
+
+Return the int version of a string that consists solely of a bunch of '1's. This can be done by first building a string of only '1's and then converting it to an int. For example, calling x = '11111' can lead to x being an integer equal to 5 (because '1111' is equal to 0+1+2+3+4 = 10, which when converted will be"	" the n-1'st number from the sequence specified by problem, wherein the only allowed digits in said numbers are 1 and 0.
+
+Task: Count at most two as input and produce output according to description above.
+""""""
+
+
+def fib(n):
+  return int(((1+5**0.5)/2)**n / sqrt(5)+0.5)
+
+    # put your code here"
+A000045	Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1.	0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765,10946,17711,28657,46368,75025,121393,196418,317811,514229,832040,1346269,2178309,3524578,5702887,9227465,14930352,24157817,39088169,63245986,102334155	" 
+def fib():
+    """""" Generates the Fibonacci numbers, starting with 0 """"""
+    x, y = 0, 1
+    while 1:
+        yield x
+        x, y = y, x+y
+f = fib()
+a = [next(f) for _ in range(100)]
+def A000045(n):
+    """""" Returns Fibonacci number with index n, offset 0 """"""
+    return a[n]
+def A000045_list(N):
+    """""" Returns a list of the first n Fibonacci numbers """"""
+    return a[:N]
+"	" the Fibonacci numbers through a generator function, a separate column.
+
+def P(n, k):
+    """""" Returns the number of distinct arrangements of k indistinguishable items into n distinguishable slots """"""
+    # this will be used to generate the power set
+    def powerset(s):
+        x = len(s)
+        masks = [1<<j for j in range(x)]
+        for i in range(1<<x):
+            yield list"	" Fibonacci numbers up to the n-th Fibonacci number, described as A000045.
+
+Now input an index for which you want a Fibonacci number, and output z = F_n.
+coder's challenge:
+Assuming that we need to compute only up to the 30th digit, it would take about 13 seconds for fib2, but less than 0.01 seconds for fib1 using a fast computer. However, when I used astor/ uncomp"	" approximations to the Fibonacci numbers. How many iterations are needed to produce their true values may be found with the following code, run from the command line:
+
+python -c ""import fibonacci as f; R=f.realized(200); N=[int(i[0]) for i in R]; import A000045 as a; D=[a.A000045_offset(n) for n in N]; print [round((d-f"	" the first 100 Fibonacci numbers as a list in the variable ""a"" and defines two functions, one of which generates the n-th Fibonacci number, while the other returns a list counting through those numbers. Don't edit the above code; instead, accomplishing tasks provided below.
+"""""""
+A000045	Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1.	0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765,10946,17711,28657,46368,75025,121393,196418,317811,514229,832040,1346269,2178309,3524578,5702887,9227465,14930352,24157817,39088169,63245986,102334155	" 
+from gmpy2 import fib
+for n in range(100): print(str(n) + "" "" + str(fib(n)))  
+"	" Fibonacci numbers with the fastest speed.
+""""""
+
+
+def fib(n):
+    memo = [0, 1]
+    if n < len(memo): return memo[n]
+    else: return fib(n-1) + fib(n-2)
+
+
+print(fib(29))"	" the first 100 Fibonacci numbers, as compared to writing for n in range(100): fib(n)
+
+for the above three functions, including fib2.
+
+"""""""	" a Fibonacci sequence beginning with 0 through to a given limit.
+"""""""	" a million Fibonacci numbers fast.
+'''
+
+
+def fib(n): return ((1+5**0.5)/2)**n/((5**0.5)+2)"
+A000058	Sylvester's sequence: a(n+1) = a(n)^2 - a(n) + 1, with a(0) = 2.	2,3,7,43,1807,3263443,10650056950807,113423713055421844361000443,12864938683278671740537145998360961546653259485195807	"
+A000058 = [2]
+for n in range(1, 10):
+    A000058.append(A000058[n-1]*(A000058[n-1]-1)+1)
+
+"	" the Lucas numbers
+A000032 = [2]
+for n in range(1, 10):
+    A000032.append(A000058[n-1] + A000058[n])
+
+
+The above code generates the Chromatic Numbers
+
+How to prove that Wiener’s Attack works? Can you explain the maths in more plain English?
+
+Proof by Contradiction: I want to prove that Wiener's Attack works on discrete logar"	" the first 10 values of the fibonacci sequence.
+
+
+"""""""	" the first 45 Fibonacci numbers through a list and an iterator, described below:
+
+Every consecutive positive integer either starts with an odd number of ones or an even number of ones. The first 33 Fibonacci numbers start with two 1's. The next two begin with one 1 that is the sum of the preceding two (e.g., (00)1 = 091 = 110). Every consecutive positive odd number is the sum/sum/n-1 + 1(/2"	" the sequence of Fibonacci numbers needed for testing.
+""""""
+import sys, ast
+
+
+def gen_fib():  # DONE
+    fib1 = 0; fib2 = 1; i = 0  # Initialize the first 2 seed values, and start counting iterations going up to input n (the second argument given in terminal) to append each h-sequence number into a list with an incremental count. If using function no. 1); Fib1=0&F"
+A000059	Numbers n such that (2n)^4 + 1 is prime.	1,2,3,8,10,12,14,17,23,24,27,28,37,40,41,44,45,53,59,66,70,71,77,80,82,87,90,97,99,102,105,110,114,119,121,124,127,133,136,138,139,144,148,156,160,164,167,170,176,182,187,207,215,218,221,233,236,238,244,246	"
+from sympy import isprime
+print([n for n in range(10**3) if isprime(16*n**4+1)])
+
+"	" all integers n such that 16n4 + 1 is prime.
+
+points.sort(key=lambda p: (p[0]**2 + p[1]**2, p[0]))
+
+The above code sorts the points in the list points by the distance of each point to the origin. No explanations needed.
+Input Format
+
+The first line are the integers, n and k separated by a space.
+The second line contains n space separated integers of"	" a list of all positive integers less than 10^3 for which 16n^4 + 1 is a prime number.
+
+def statement(accounts: dict) -> str:
+    return (f""Account Balance          : {'${:.2f}'.format(accounts['balance'])}\nPending Interest Payment   : {'${:.2f}'.format(accounts['interest'])}\nTotal Dues                : {'${:"	" all n such that the representation (16*n**4 + 1) is prime, when n >= 0.
+""""""
+fib_memo=dict()
+def fibn(n:int)->int:
+    if n==0 or n==1: fib_memo[n]=n
+    else: 
+        try     :a=fib_memo[n-1] # except IndexError as err: print(err) #f"	" a list of all integer numbers in the range [0,1000) such that whenever n is multiplied by 16 and raised to the power 4, we get a prime number plus 1.
+
+Note: The function matplotlibFunction has been loaded for you from online libraries. If it conflicts with your own functions file, just modify existing code to use your version without overwriting it entirely.'''"
+A000073	Tribonacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) for n >= 3 with a(0) = a(1) = 0 and a(2) = 1.	0,0,1,1,2,4,7,13,24,44,81,149,274,504,927,1705,3136,5768,10609,19513,35890,66012,121415,223317,410744,755476,1389537,2555757,4700770,8646064,15902591,29249425,53798080,98950096,181997601,334745777,615693474,1132436852	"
+def a(n, adict={0:0, 1:0, 2:1}):
+    if n in adict:
+        return adict[n]
+    adict[n]=a(n-1)+a(n-2)+a(n-3)
+    return adict[n] 
+"	" the pythagorean triples up to 10. To see the code, see generatePythagoreanTriple.py
+
+dataset = [
+(59, 994),
+(372, 911),
+(8, 15)
+]
+for n, m in dataset:
+    result = a(n)
+    print(f""Pythagorean triple summing to {n}: {m == result} {m} {result}"")
+"	" the n-th Fibonacci number through an inbuilt dictionary method
+'''
+
+
+from pip._vendor.distlib.compat import raw_input
+
+print(""------------------------------"")
+print(""Type the index: "")
+index = int(raw_input())
+print(""Result: "")
+try:
+              print(fibD.get(""fib"", -1)(int(index)))
+except ValueError:
+         print(""Invalid input"	" the n-th Fibonacci number through an iteratively memoized algorithm.
+"""""""	" the n-th Fibonacci number through tabulation.
+"""""""
+A000078	Tetranacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4) for n >= 4 with a(0) = a(1) = a(2) = 0 and a(3) = 1.	0,0,0,1,1,2,4,8,15,29,56,108,208,401,773,1490,2872,5536,10671,20569,39648,76424,147312,283953,547337,1055026,2033628,3919944,7555935,14564533,28074040,54114452,104308960,201061985,387559437,747044834,1439975216,2775641472	"
+A000078 = [0,0,0,1]
+for n in range(4, 100):
+    A000078.append(A000078[n-1]+A000078[n-2]+A000078[n-3]+A000078[n-4])
+
+"	" the first 100 Fibonacci numbers using a Python list comprehension to generate a list of the first 100 n-th Fibonnaci numbers, assigning it to the variable A000078.
+
+'''
+
+A000078 = [0, 0, 0, 1]
+for n in range(4, 100):
+    A000078.append(
+        A000078[n - 1] + A000078[n - 2] + A000078[n"	" the sequence of Fobibonacci numbers less than 100. The head comment explains how this function works."")"	" the first one hundred Fibonacci numbers, as a list.
+""""""
+
+sequence_iterator = iter(range(4, 1000))
+while True:
+    try:
+        n = next(sequence_iterator)
+
+        # In general case where the sequences are generated by recursion the branching factor b is either 1 or 2. Fixed-point analysis helps us find that in this context the average branching factor is actually <1 which leads to an unbounded generator. 
+
+"	" the first 100 values of the above sequence. See here for further information:
+
+https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence""""""
+
+  def memoize(self, fn):
+        seen = dict() # our cache
+
+    def with_cache(n): # Wrapper function that takes number n as argument and return corresponding fib bumber\n"",
+            if n not in"
+A000079	Powers of 2: a(n) = 2^n.	1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728,268435456,536870912,1073741824,2147483648,4294967296,8589934592	"
+def a(n): return 2**n
+print([a(n) for n in range(34)]) 
+"	" the sequence 2, 4, 8, 16, 32, ..., 2^34-1 in list comprehension form. 
+
+The above code is a filter. 
+""""""
+#2**n
+def filter1(func, x):
+        return list(filter(func, x)) 
+
+#a(n)(a -reduce)(f)
+def reduce(n):
+        func = lambda x, y: x * y
+        a = reduce"	" the nth number in the ""Series of self powers.""
+Start with a set value a=1. Then, do the following n many times: a = 2^a. Return the last value a.
+print(list(reversed([2 ** n for n in range(0, 44)])))
+The above code generates a list of number beginning at 0 and moving until it reaches 44, in which it stops. Each entry is two to the power of its index ("	" a list of 34 different integers by calling f() many times.
+
+This is how the list was generated:
+
+f(0) is currently 2. This value will not change a'cause f(0)) returns a literal or variable, and those don't change. So add 2 to the resultList (which currently only has the element 2 in it).
+f(1) is currently 4 because 2 + f(0) = 3 +2 = 5, so we add"	" the 34 Fibonacci numbers, such that: <
+2, 4, 8, 16, ... , 18446744073709551616
+>
+
+
+Sample I/O:
+Here are some cases which can be handled using the functions above. Below these inputs understand how to output a Fibonacci number, and numeric inputs given for n should output the correct result.
+Examples of types possible to print in standard format include string literals (strings), byte literals ("
+A000118	Number of ways of writing n as a sum of 4 squares; also theta series of lattice Z^4.	1,8,24,32,24,48,96,64,24,104,144,96,96,112,192,192,24,144,312,160,144,256,288,192,96,248,336,320,192,240,576,256,24,384,432,384,312,304,480,448,144,336,768,352,288,624,576,384,96,456,744,576,336,432,960,576,192	"
+from sympy import divisors
+def a(n): return 1 if n==0 else 8*sum(d for d in divisors(n) if d%4 != 0)
+print([a(n) for n in range(57)]) 
+"	" the sequence a(n), the ""Solomon's Number"", separated by spaces.
+
+[1, 3, 4, 5, 6, 7, 9, 12, 15, 16, 20, 25, 27, 30, 36, 45, 49, 50, 54, 57]
+
+There are eight other ways of generating instances of ""Solomon's Problem"":
+
+9, 13, 21, 26, 37, 46, 55, 58, 63
+
+
+
+Ram"	" a sequence of numbers: 1, 12, 56, 300, 1100, 5720, 30128, 116396, 555548 and 2733300. Can you explain why the sequence has this pattern?
+""""""
+
+
+def fib1(n: int) -> int:
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return b
+
+
+def fib2(n: int)"	" a list of integer values that are equivalent to the number of letters in an alphabetic phone number when it's spelled out. For example, the numbers 1 and 0 cause 'one' and 'zero' to be spelled out. The numbers 11, 14 and 18 are exceptions (three, one & eight).
+
+The above program is not my best work but I had fun with it! I hope you enjoy this Hangaroo :)
+'''"	" the first 60 numbers in the Recamán sequence:
+0, 1, 3, 6, 2, 7, 13,...
+This code is transcribed from a RosettaCode.org page for computing the [Recamán's Sequence](https://rosettacode.org/wiki/Keypad_discovery#Python)  as adopted by William Ayd alternatingly incrementing and decrementing its terms for every step along the way to obtain new terms if it finds that"
+A000142	Factorial numbers: n! = 1*2*3*4*...*n (order of symmetric group S_n, number of permutations of n letters).	1,1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600,6227020800,87178291200,1307674368000,20922789888000,355687428096000,6402373705728000,121645100408832000,2432902008176640000,51090942171709440000,1124000727777607680000	"
+for i in range(1, 1000):
+    y = i
+    for j in range(1, i):
+       y *= i - j
+    print(y, ""\n"")
+"	" all the sequence of ways to combine 1000 operators, as sequences, for positive integers.
+
+
+import itertools
+import matplotlib.pyplot as plt
+
+seq = [1,2,3,4,5,6,7,6,5,4,3,2,1,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2"	" a function that looks like the number $3^n$, where n is a positive integer. The code generates an example chart for a number x between 0 and 100, where the spots that include 1's indicate the number of unique ways there are to create combinations without repetition among n objects by selecting r of them:
+$ 3^{90} \equiv 5 39032065683906140000000000\cdot5^{756082198050000 // 756091987000000 }"	" Pascal's Triangle.
+
+'''"	" expressions for the n-th Catalan number
+
+                                            """"""
+    '''a, b = 0, 1
+for i in range(n):
+        a, b = b, a+b''' #The above code snippet is ommitted because it's substitute with recursion below.We can also use generators here which are different than iterators as Python stores only one element in memory at once whereas generator program keeps generating numbers on check of every condition until the stopIter"
+A000142	Factorial numbers: n! = 1*2*3*4*...*n (order of symmetric group S_n, number of permutations of n letters).	1,1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600,6227020800,87178291200,1307674368000,20922789888000,355687428096000,6402373705728000,121645100408832000,2432902008176640000,51090942171709440000,1124000727777607680000	"
+import math
+for i in range(1, 1000):
+    math.factorial(i)
+    print("""")
+
+"	" all factorials from 1 to 1000, printing the value of all factorials on a single line for each index.
+
+While loop:
+
+while condition:
+    do something
+
+
+Lesson 06 -  Conditions
+Topics covered:
+
+if else elif conditions
+break and continue
+in
+
+
+def squirrel_play(temp, is_summer):
+    if is_summer:
+        if temp >= 60 and temp <= 100:
+            return"	" all factorials upper than 0 and prints them in a new line whenever encountered.
+
+Strucs- mentary Data Types (in Python)¶
+The following is an overview of the primitive/structured data types:
+
+Integer + various number of bits (integers): The purpose of this type is to provide an abstraction between positive and negative integers, so yes, you can use negatives when storing integers, -2147483648 is a valid integer, for example."	" the sequence of factorials for the numbers before 1000 through an iterative construct. The print('') statement is not necessary, but .
+"""""""	" the factorial for numbers 1...1000, until a StopIteration is raised.
+'''"
+A000203	a(n) = sigma(n), the sum of the divisors of n. Also called sigma_1(n).	1,3,4,7,6,12,8,15,13,18,12,28,14,24,24,31,18,39,20,42,32,36,24,60,31,42,40,56,30,72,32,63,48,54,48,91,38,60,56,90,42,96,44,84,78,72,48,124,57,93,72,98,54,120,72,120,80,90,60,168,62,96,104,127,84,144,68,126,96,144	"
+from sympy import divisor_sigma
+def a(n): return divisor_sigma(n, 1)
+print([a(n) for n in range(1, 71)]) 
+"	" a list of how many divisors a number has
+""""""
+
+""""""
+figs = [[0,1,1], [1,1,1]]
+def pascal_triangle_mod(i: int, j: int) -> int:
+    if i == 0:
+        return 1
+    if j == 0:
+        return figs[i-1][j]
+    return figs[i-1][j] + figs"	" a number comprised of all counts of divisors of a natural number n, relative to unity (1).
+This is known as the sigma function, and this function happens to also be a generating function for all prime numbers, up to and including n.
+
+def g(n):
+    """"""The expected runtime here is exponential, so one shouldn't run
+    for n much greater than 70. If you still do, prepare for very long or
+    even indefinite wait times"	" the number of integers from 1 (inclusive) to 70 (exclusive).
+
+def b(n):
+    return divisor_sigma(n, 1)-n
+print([b(i) for i in range(1, 71)])"	" all divisors from 1 to 70.
+class Fibo(object):
+
+	def fib1(n: int) -> int:
+	a, b = 0, 1
+    for i in range(n):
+        a, b = b, a+b
+    return b
+
+    def fib2(n: int) -> int:  if n == 0 or n == 1 : return n else : return fibo(n - 01) + fibo"
+A000213	Tribonacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) with a(0)=a(1)=a(2)=1.	1,1,1,3,5,9,17,31,57,105,193,355,653,1201,2209,4063,7473,13745,25281,46499,85525,157305,289329,532159,978793,1800281,3311233,6090307,11201821,20603361,37895489,69700671,128199521,235795681,433695873,797691075,1467182629	"
+alst = [1, 1, 1]
+[alst.append(alst[n-1] + alst[n-2] + alst[n-3]) for n in range(3, 37)]
+print(alst) 
+"	" 37 terms of the Fibonacci sequence in O(n) time.
+"""""""	" the first 36 Fibonacci numbers a, b, c ... i.e (0'st, 1'nd, 2'nd, ..., 35'rd)
+
+
+2.
+=====
+Below is an example of the usage of for-loops in Python3:
+
+Write a python3 function fib5(n: int) -> List[int] that returns a list containing the first n Fibonacci numbers starting with 0.
+
+Notes:
+There"	" the first 36 Fibonacci numbers.
+""""""
+def fib(n: int) -> int:
+     if n == 0 or n == 1:
+        return n 
+     else : 
+        return (fib(n - 1)+fib(n-2))
+
+
+
+
+
+
+
+
+
+                                            ## I created the list alst to store the last three term and use them in every subsequent evaluation   [1,1,1] is initial value since"	" the first 37 Fibonacci numbers through list generation.
+"""""""
+A000265	Remove all factors of 2 from n; or largest odd divisor of n; or odd part of n.	1,1,3,1,5,3,7,1,9,5,11,3,13,7,15,1,17,9,19,5,21,11,23,3,25,13,27,7,29,15,31,1,33,17,35,9,37,19,39,5,41,21,43,11,45,23,47,3,49,25,51,13,53,27,55,7,57,29,59,15,61,31,63,1,65,33,67,17,69,35,71,9,73,37,75,19,77	" 
+from sympy import divisors
+def a(n):
+    return max(i for i in divisors(n) if i % 2)
+[a(n) for n in range(1, 101)]
+"	" the list of squares for natural numbers from 1 to 100. 
+
+The first part of the code finds the divisors of n, which returns the set of all positive integers that divide n evenly. Then, we filter only those numbers that are even. This is why the answer is the maximum of the resulting list after the operation. 
+
+def b(n):
+    div, res = divisors(n), 0
+    while div:
+        res += div"	" the remaining anti-prime Fibonacci numbers according to a definition given by Jacob Bernoulli.
+
+def anti_prime(n: int) -> bool:
+    if n == 0 or n == 1:
+        return True
+    factors = list()
+    for i in range(1,n+1):
+        if n % i == 0:
+            factors.append(i)
+        else:
+            continue
+    for f in factors:
+"	" prime numbers through a sieve method, described below.
+
+def sieve(n):
+    L = [True] * (n+1)     # Initialize the array of booleans to True, i.e., set all values to 1
+    L[0]                   # Initialize 0 and 1 to False, since they are not prime numbers
+    L[1]
+    p = 2                  # The first actual loop will set all multiples of 2"	" a(n) as described in the problem statement.
+def timer():
+    class TimeExpired(Exception): # Error message: 'Time expired.'
+
+        pass
+
+    def __init__(self, secs):     # Initiates internal countdown variable and sets it to given seconds' value.
+
+        self._sec = int(secs)     
+
+    def __int__(self):            # Returns remaining 59:59 for 60 minutes if under or equal 0,"
+A000265	Remove all factors of 2 from n; or largest odd divisor of n; or odd part of n.	1,1,3,1,5,3,7,1,9,5,11,3,13,7,15,1,17,9,19,5,21,11,23,3,25,13,27,7,29,15,31,1,33,17,35,9,37,19,39,5,41,21,43,11,45,23,47,3,49,25,51,13,53,27,55,7,57,29,59,15,61,31,63,1,65,33,67,17,69,35,71,9,73,37,75,19,77	"
+from __future__ import division
+def A000265(n):
+    while not n % 2:
+        n //= 2
+    return n 
+"	" the n-th even Fibonacci number, as described below:
+
+If n is even (such as n = 0 or n = 2), then return n. If n is odd (such as n = 1 or n = 3 or n = 5 or n = 7 or n = 9 or n = 11 or n = 13 or n = 15 or n = 17 or n = 19 or n = 21 or n = 23 or n = 25 or n = 27 or n ="	" numbers of the Lucas sequence. The sequence is: 0, 1, 2, ..., n**2 - n + 1, n**2 - 2*n + 2, n**2 - 3*n + 3, and so on.
+'''"	" A000265, discussed below.
+
+In mathematics, the factorial of an integer n, denoted by n! is the following product 1 x 2 x ... x n for an integer >= 0.
+
+    If n = 0, then 0! = 1 by definition.
+    If n % 2 == 1 and k > 0 then (n - k)!, k!, (n + k)!, (k-1)! are class numbers in A000265 for all ints"	" the sequence        A000265 of odd divisors satisfying n=1/2k^2 for some k.
+'''"
+A000302	Powers of 4: a(n) = 4^n.	1,4,16,64,256,1024,4096,16384,65536,262144,1048576,4194304,16777216,67108864,268435456,1073741824,4294967296,17179869184,68719476736,274877906944,1099511627776,4398046511104,17592186044416,70368744177664,281474976710656	" print([4**n for n in range(25)]) 
+"	" a list of n.
+'''
+
+# Baseline requirements: Install Anaconda 3 on your system
+# Use these install instructions if you do not already have the Anaconda distribution on your system.
+#
+#     Go to https://www.anaconda.com/download/ and download the Python 3.7 compatible version
+#     Open the downloaded Anaconda application and follow the prompts as you execute the installation
+#     Note - choosing default options is"	" a list of n-th powers of 4 for 0 < n <= 25.
+
+print([4 ** n for n in range(25) if n % 2 != 0])
+The above code does the same as the line above, but for odd n-th powers of 4 algorithm is much slower.
+
+5 + 5 * (3 - (29 // 6)) 
+The following expression evaluates to an integer.
+import random
+
+print(random.random() * 100"	" a list of Fibonacci numbers in a range. 
+""""""
+# .......................fibonacci series...........1 fib............2
+a, b = 0, 1
+for i in range(25):
+    a, b = b, a + b"	" a list of the first 100 Fibonacci numbers using a for loop.
+
+gt=[4 ** n for n in range(25)]
+print([int(math.log(n, 4)) for  gm,gmztxm in pytznames.items()])
+
+
+The above code generates a list of integers corresponding to the number of digits needed to express each of these numbers in base-4 by running through gt and finding which values are greater than or equal"
+A000378	Sums of three squares: numbers of the form x^2 + y^2 + z^2.	0,1,2,3,4,5,6,8,9,10,11,12,13,14,16,17,18,19,20,21,22,24,25,26,27,29,30,32,33,34,35,36,37,38,40,41,42,43,44,45,46,48,49,50,51,52,53,54,56,57,58,59,61,62,64,65,66,67,68,69,70,72,73,74,75,76,77,78,80,81,82,83	"
+def valuation(n, b):
+    v = 0
+    while n > 1 and n%b == 0: n //= b; v += 1
+    return v
+def ok(n): return n//4**valuation(n, 4)%8 != 7
+print(list(filter(ok, range(84)))) 
+"	" the perfect squares below 84 using the filter() function.
+
+Please keep in mind the distinction between a list comprehension and a generator comprehension when editing this code. immutable&mutable objects; generators and genera'coroutines; filter() function; filter() function
+
+"	" a list of natural numbers which are relatively prime to 4, since neither 4, 8 nor 7 evenly divide into them.
+precondition: n ≥ 3 5
+1 + 2 + ... + t ≡ 1 modulo n Multiple congruences in how I joined the pieces breaks down into its aforementioned components: 
+The first and third gates ensure that we keep only powers of two, and the last two 
+gates generate a list of primes as big as the most significant bits of"	" the integer divisibility sequence (https://oeis.org/A306724). This OEIS sequence isn't as commonly cited, but I personally find it interesting. Observe the first few values of this sequence:
+
+All composite numbers have even valuation for 4. For all other numbers, if its square is in the sequence and ok(square) does not evaluate to False, then so does n itself. Intuitively, a number n has a particular value because all"	" a list of positive integers such that positive integer n is divisible by the factors of 4 and its representation in binary does not represent 8 or 1111. Therefore, as shown above, a ^ b will always be an integer between 0 and 80 for this set of inputs.
+"""""""
+A000408	Numbers that are the sum of three nonzero squares.	3,6,9,11,12,14,17,18,19,21,22,24,26,27,29,30,33,34,35,36,38,41,42,43,44,45,46,48,49,50,51,53,54,56,57,59,61,62,65,66,67,68,69,70,72,73,74,75,76,77,78,81,82,83,84,86,88,89,90,91,93,94,96,97,98,99,101,102,104	"
+def aupto(lim):
+  squares = [k*k for k in range(1, int(lim**.5)+2) if k*k <= lim]
+  sum2sqs = set(a+b for i, a in enumerate(squares) for b in squares[i:])
+  sum3sqs = set(a+b for a in sum2sqs for b in squares)
+  return sorted(set(range(lim+1)) & sum3sqs)
+print(aupto(104)) 
+"	" all numbers less than lim that are the sum of exactly three perfect squares.
+
+def primes_x(n):
+	N=(n-3)//2+1
+	a=[True]*N
+	for i in range(N):
+		if a[i]:
+			p=i*2+3
+			for j in range(2*i*(i+3)+3,N,p):
+		"	" the number of unique squares sum below an upper bound lim. It uses generators and set theory lookups, described below:
+
+First assign a list comprehension to generate a list of the sequence of squares up to the square root of the upper bound lim. Then for every element in that list, set a set comprehension that generates a second set by taking elements from the original list, which all have now been converted to type list through list comprehensions, as above: [a + b for (i"	" all squares, non-squares and their sums under a certain limit and prints 
+the lengths of the sets of squares under a, b, and a + b respectively.
+squares = [k * k for k in range(1, int(lim ** 0.5) + 2) if k * k <= lim]
+
+    Here we construct an array containing all perfect squares which are less than or equal to the number 
+we seek to produce an upper bound for in"	" a list of an up-to lim'th triangular number that is a square, quadratic, cubic and quartic total. The above solution can be extended to higher dimensions by recursion as follows:
+
+def sqsum(lst): return max([i*j for i in lst for j in lst])**0.5
+print(sqsum([1] + aupto(104)))
+
+"
+A000414	Numbers that are the sum of 4 nonzero squares.	4,7,10,12,13,15,16,18,19,20,21,22,23,25,26,27,28,30,31,33,34,35,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81	"
+limit = 10026 
+from functools import lru_cache
+nzs = [k*k for k in range(1, int(limit**.5)+2) if k*k + 3 <= limit]
+nzss = set(nzs)
+@lru_cache(maxsize=None)
+def ok(n, m): return n in nzss if m == 1 else any(ok(n-s, m-1) for s in nzs)
+print([n for n in range(4, limit+1) if ok(n, 4)]) 
+"	" all squarefree odd numbers below 10026. A squarefree positive integer is an integer that is not divisible by the square of any integer e.g.
+
+1, 2, 3, 5, 6, 7, 10, 11, 13, 14, 15
+
+is an in-sequence squarefree progression because none of the elements are divisible by a square less than or equal to 15. An out of sequence progression may be considered squarefree if the difference between the minimum and"	" all numbers n in [1,10025] such that the last four digits of their square are themselves.
+
+While we're on a subject that would cause a physics professor to facepalm hard enough to send chills down your spine, let me tell you that squares can be summed using many methods. Some people like to use the quadratic equation. Others prefer brute-forcing it with a short loop or recursive method. However, given the input range, this particular formulation excels"	" good bases for the integer value ""limit"", up to and including the value of limit.
+
+import numpy as np
+a=2**10 #size of table covered by cache, default 1024bytes (Kb) in 32bit architecture. For 16Gb to be cached the size is 2**14 ie 16384bytes ie 2Mb. 
+n, r = 1024 * 4, 8   # row_length  stride within each chunk; chunks are NxN("	" all Open systems through the boolean function ok, defined as below:
+
+ok is a memoized lru_cache(maxsize=None) which returns booleans. It takes two arguments, n and m. Intuitively, if you set m to 4 it checks whether there are any squares below n< 10026 (limit), just like I did at first! But now having done so slightly differently, updating n to always be the square of an article number we can ask """
+A000419	Numbers that are the sum of 3 but no fewer nonzero squares.	3,6,11,12,14,19,21,22,24,27,30,33,35,38,42,43,44,46,48,51,54,56,57,59,62,66,67,69,70,75,76,77,78,83,84,86,88,91,93,94,96,99,102,105,107,108,110,114,115,118,120,123,126,129,131,132,133,134,138,139,140,141,142	"
+def aupto(lim):
+  squares = [k*k for k in range(1, int(lim**.5)+2) if k*k <= lim]
+  sum2sqs = set(a+b for i, a in enumerate(squares) for b in squares[i:])
+  sum3sqs = set(a+b for a in sum2sqs for b in squares)
+  return sorted(set(range(lim+1)) & (sum3sqs - sum2sqs - set(squares)))
+print(aupto(142)) 
+"	" the sequence of all sums, s, of positive integer powers of 2, such that 1 <= s, 2*s and 3*s <= n.
+
+'''"	" all the coprime pairs to and less than some integer lim. For example, for lim of 150, it generates a list
+
+[1, 2, 3, 7, 17, 19, 35, 65, 91, 143]
+"	" all triangular numbers that are also square numbers.
+
+For a range of n, return all unique combinations from 1 to n such that the first number in each tuple is smaller than the second number in each tuple.
+#help(itertools) for more functions
+from itertools import combinations as cmb; print(list(cmb(''.join([str(i) for i in range(1,int(input())+1)]), 2)))
+You are allowed"	" all Products of each set with k, for 1 < k < 5.
+It does so by converting 
+squares = [k * 4 for k in range(1, 6) if k * 4 <= lim] 
+to a set equivalent to see that every element and its double are included in the product candidate list:   {2, 3, ... , 9} . Then 2 is added to the elements from above to make them odd (which are obviously not two squares made"
+A000468	Powers of ten written in base 8.	1,12,144,1750,23420,303240,3641100,46113200,575360400,7346545000,112402762000,1351035564000,16432451210000,221411634520000,2657142036440000,34327724461500000,434157115760200000,5432127413542400000,67405553164731000000,1053071060221172000000	"
+def a(n): return int(oct(10**n)[2:])
+print([a(n) for n in range(20)]) 
+"	" a list of the first 20 octal numbers.
+
+Is a(6) the same as a(4)?
+
+Unclear
+
+What is the output of:
+
+print(a(8))
+Which is bigger a(8) or a(6)?
+What would the output of:
+
+print(16*8 + 30)
+
+Which is the base of 'a' in the running instruction?
+
+16, 8 or 6?
+What is"	" the powers of 8 in decimal.
+
+
+#EXAMPLE 2
+#See Course Project
+#NEW METHOD FOR TRIS (using the amount of sides and the sum of each one)
+triangle(n: int) -> int:
+
+def triangle1(n: int) -> int:
+    if n == 1:
+        return 1
+    else:
+        return n + triangle(n-1)
+
+The above function returns the nth"""	" numbers in string form, and extracts the desired digits through slicing.
+
+['', '3', '513', '10323', '206591', '4400547']
+After assigning the previous string to an int, we have this list: [0, 3, 513, 10323, 206591]'''"	" the octal number of the first 20 powers of ten. These numbers are all ones to the power of various exponents.
+
+The above code is an interview question that was asked by Google as a phone screen interview question. Below is an analysis for how a candidate might answer this type of coding exercise and what mistakes we should expect candidates to make:
+
+Mis-interpretation - Candidates who conceptionally miss the point can get confused (i) when n equals zero, (ii)"
+A000538	Sum of fourth powers: 0^4 + 1^4 + ... + n^4.	0,1,17,98,354,979,2275,4676,8772,15333,25333,39974,60710,89271,127687,178312,243848,327369,432345,562666,722666,917147,1151403,1431244,1763020,2153645,2610621,3142062,3756718,4463999,5273999,6197520,7246096,8432017,9768353	"
+A000538_list, m = [0], [24, -36, 14, -1, 0, 0]
+for _ in range(10**2):
+    for i in range(5):
+        m[i+1] += m[i]
+    A000538_list.append(m[-1]) 
+"	" A000538 initialized with the integers [1, 1, 1, 1, 1, 1], and then populates A000538 with more entries sequentially until m[6].
+""""""
+
+
+def fib1(n: int) -> int:
+    return 0
+
+
+def fib2(n: int) -> int:
+    return 1
+
+
+def fib3(n: int) -> int:
+    return 0  # placeholder
+
+
+A000538_list"	" a list of positive integers up to n. The A000538 sequence is its corresponding Fibonacci numbers.
+
+Usage examples:
+
+Let a1, ..., a5 decimal equivalents of 1/5, 2/5, ..., 5/5 written in base 10. Then:
+
+    f_n = [[a_{i} + (-1)^{i+1} for i in range(5)]] = [0] + [a_4 - (-1"	" a sequence using two sets of four generators. Each instance of tuple1 generates the first set, and each instance of tuple2 generates a second.
+
+Tuple1 is an n-ary iterator defined by
+
+    Tuple[int, ...] = (3, 5, 7)
+    def parity(a: int) -> None:
+        sequence_iterator = iter(source_finite_sequence()) # effectively non-terminating (sequence terminates in 150th item"	" an m-by-m matrix A with shape (2, 3), whose ([1, 2], [3]) entry is the n-th Fibonacci number.
+"""""""
+A000539	Sum of 5th powers: 0^5 + 1^5 + 2^5 + ... + n^5.	0,1,33,276,1300,4425,12201,29008,61776,120825,220825,381876,630708,1002001,1539825,2299200,3347776,4767633,6657201,9133300,12333300,16417401,21571033,28007376,35970000,45735625,57617001,71965908,89176276,109687425,133987425	"
+A000539_list, m = [0], [120, -240, 150, -30, 1, 0, 0]
+for _ in range(10**2):
+    for i in range(6):
+        m[i+1] += m[i]
+    A000539_list.append(m[-1]) 
+"	" Python outputs that could be used to create lists that might be easily compared to other typical list outputs in a way that might enable an eval() function to compare list outputs.
+
+
+def a_n(n):
+    D, i, a = {0:0, 1:0, 2:1}, 2, [0,1]
+    
+    while n > len(a):
+        n -= len(a)
+        a += [(D[(i+"	" the first 100 Fibonacci numbers by exponentiating an array A000539, which the according to the Online Encyclopedia of Integer Sequences has the following coefficient configuration: (the initial value of the sequence is 0 or 1).
+    
+    A(0) = 0 
+    A(1) = 1 
+    A(n+2) = A(n) + A(n+1) for n >=1.
+    
+    This sequence also includes entries"	" the Fibonacci numbers using a sequence, A000539_list and a method, fib3(), given an i-th index store the sum of the (i - 1)st and (i - 2)nd Fibonacci numbers in F[(i + 1)'th] and n.
+
+Can you find a formula for the element in position n-2?
+"""""""	" a sequence defined by A180804(n)=""Fibonacci numbers: 1,1,2,3,5'. "", which is given in the OEIS under ""A001906""; see https://oeis.org/A001906 for further context and content.
+""""""
+
+
+def fib(n):
+    a = 0; b = 1; i = -1  # set seed values of intervals below # :notset: should this be"
+A000540	Sum of 6th powers: 0^6 + 1^6 + 2^6 + ... + n^6.	0,1,65,794,4890,20515,67171,184820,446964,978405,1978405,3749966,6735950,11562759,19092295,30482920,47260136,71397705,105409929,152455810,216455810,302221931,415601835,563637724,754740700,998881325,1307797101,1695217590	"
+A000540_list, m = [0], [720, -1800, 1560, -540, 62, -1, 0, 0]
+for _ in range(10**2):
+    for i in range(7):
+        m[i+1] += m[i]
+    A000540_list.append(m[-1]) 
+"	" the sequence A000540, known as the Fibonacci numbers, through dynamic programming. As shown below, A000540_starts_with_only_1s = True. 
+
+q = """"""
+exists(Number,  # This open quantifier declares that we’re solving any number of fibonacci() proofs.
+    # State our hypothesis:
+    (fibonacci(Number) = FibonacciNumber)
+    # The condition"	" the first 100 elements of the Fibonacci sequence instead of explicitly defining them, through dynamic programming.
+""""""
+
+
+def fib(n: int) -> int:
+    if n < 0:
+        raise ValueError(""Should be at least 0"")
+
+    if n == 0 or n == 1:
+        return n
+
+    return fib(n - 1) + fib(n - 2)
+
+
+if __name__ == '__main__':
+    print("	" the Fibonacci numbers through a set of lists, looked up using 'memo' dictionaries.
+
+A fibonacci directory was created containing fib1.py and two test functions tests/test_fib1.py and tests/test_fib2.py for the iterative function fib1() and the recursive function fib2(). Each of these test functions runs against the sample in A000540 in OEIS, is able to verify that this sequence holds true"	" the sequence of the Fibonacci numbers.
+The list A000540_list contains the said sequence.
+""""""
+
+
+def lex_order(ls: List[str]) -> None:
+    """"""Sort ls in place by modified natural order as described at https://xkcd.com/ Arnold's problem 4.""""""
+
+    def key(w: str) -> Tuple[int]: ..."
+A000541	Sum of 7th powers: 1^7 + 2^7 + ... + n^7.	0,1,129,2316,18700,96825,376761,1200304,3297456,8080425,18080425,37567596,73399404,136147921,241561425,412420800,680856256,1091194929,1703414961,2597286700,3877286700,5678375241,8172733129,11577558576,16164030000,22267545625	"
+A000541_list, m = [0], [5040, -15120, 16800, -8400, 1806, -126, 1, 0, 0]
+for _ in range(10**2):
+    for i in range(8):
+        m[i+1] += m[i]
+    A000541_list.append(m[-1]) 
+"	" the A000541 sequence as above.
+
+
+def pascal(n: int) -> list:
+    s = 0
+    P = [1]
+    for _ in range(n):
+        P = [P[i]+P[i+1] for i, _ in enumerate(P[:-1])]
+        P = [1] + P + [1]
+        s += sum(P)
+    return s"	" a list of the n-th terms in the Fibonacci sequence, wherein f(n) = f(n-1)\pmod{5040}.
+""""""
+
+
+def fib3(n: int) -> int:
+    if n < 2:
+        return n
+    A000541_list = [0]
+    m = [5040,-15120,16800,-8400,1806,-126,1,0,0]
+"	" the first 100 Fibonacci numbers (n > 1) through memoization and tabulation with respect to some A000541 matrix.
+
+By storing the previously calculated value(s), every 150,00th Fibonacci number can be retrieved. However, due to the recursive nature of calculating these numbers, it may take a while for values above an million or so level be calculated. The above code generates the entire 100 Fibonacci number sequence in about 6 seconds on my machine ("	" A000541: Partial sums of Fibonacci numbers which is assigned to m. m[i] represents the partial sum of first i Fibonacci numbers, {m[0], ..., m[49]}.
+""""""
+
+
+# Solution  - 1 : Iterative using for loop. (Problem faced : Overflow)
+def fib1(n):
+    a, b = 0, 1
+    if n <= 0:            # Checking if number passed to msg"
+A000542	Sum of 8th powers: 1^8 + 2^8 + ... + n^8.	0,1,257,6818,72354,462979,2142595,7907396,24684612,67731333,167731333,382090214,812071910,1627802631,3103591687,5666482312,9961449608,16937207049,27957167625,44940730666,70540730666,108363590027,163239463563,241550448844	"
+A000542_list, m = [0], [40320, -141120, 191520, -126000, 40824, -5796, 254, -1, 0, 0]
+for _ in range(24):
+    for i in range(9):
+        m[i+1] += m[i]
+    A000542_list.append(m[-1])
+print(A000542_list) 
+"	" the Central Triangle of Figurate numbers as shown below:
+
+[0, 40320, -141120, 191520, -126000, 40824, -5796, 254, -1, 0, 0]
+[0, 40320, -141120, 191520, -126000, 40824, -5796, 254, -1, 0, 0, 8744, -42336, 111360, -157464, 92376, -"	" the 24th first Fibonacci numbers up to the first nonzero terms
+
+def nber_fibo(n: int) -> int:
+    for i in range(1, n+1):
+        m = 0
+        for _ in range(i):
+            m += round(.5 * (pow(1 + pow(5, .5), i) - pow(1 - pow(5, .5), i)))
+        A000"	" A000542_list, which is the sequence of numbers in the usage example.
+
+When you run the above code on a Lenovo T540p laptop with an Intel Core i7-5600U CPU @ 2.60GHz × 4 processor and 24GiB of memory, 1400s are required to generate a list with 1,000,000 elements. A commercial computer probably has upto 96 cores at least and 144GiB or more memory at least to make this script run"	" a list with the entries of A000542 which is defined on Wikipedia, linked below:
+
+https://en.wikipedia.org/wiki/A000542
+
+
+'''"
+A000578	The cubes: a(n) = n^3.	0,1,8,27,64,125,216,343,512,729,1000,1331,1728,2197,2744,3375,4096,4913,5832,6859,8000,9261,10648,12167,13824,15625,17576,19683,21952,24389,27000,29791,32768,35937,39304,42875,46656,50653,54872,59319,64000	"
+A000578_list, m = [], [6, -6, 1, 0]
+for _ in range(10**2):
+    A000578_list.append(m[-1])
+    for i in range(3):
+        m[i+1] += m[i] 
+"	" the A000578 sequence
+""""""
+
+class TestFibonacciNumberGeneration (unittest.TestCase):
+    def test_fib1(self):
+        for i in [0, 1, 2, 3, 4, 5]:
+            got = fib(i)
+            want = fib1(i)
+            self.assertEqual(got, want,
+                f'function wanted after calling fib (i={i}) and got"	" the sequence whose n-th element is the largest Fibonacci number that is less than or equal to n.
+
+(A001006_list, m) = ([], [2, 3, 2])
+for _ in range(10 ** 7):
+    A001006_list.append(m[-1])
+    for i in range(3):
+        m[i + 1] += m[i]
+The above code enumerates the"	" A000578.
+
+'''
+def fib(n: int) -> int:
+  if n == 0 or n == 1:
+    return n;
+  else:
+    return fib(n-1) + fib(n-2);
+
+
+
+
+
+
+
+
+
+
+
+ #fib 2 -- recursive ----"	" the first 100 Fibonacci numbers and stores them in a list.
+
+For comparison, we run the same code but with iterative updates of m[i]:
+
+(A000578_list, m) = ([], [6, -6, 1, 0])# Correction to previous upload: an older version had been uploaded without this correction. The result generated by that version was wrong. TODO Find that old file and delete it.
+
+    do {same as above"
+A000593	Sum of odd divisors of n.	1,1,4,1,6,4,8,1,13,6,12,4,14,8,24,1,18,13,20,6,32,12,24,4,31,14,40,8,30,24,32,1,48,18,48,13,38,20,56,6,42,32,44,12,78,24,48,4,57,31,72,14,54,40,72,8,80,30,60,24,62,32,104,1,84,48,68,18,96,48,72,13,74,38,124	"
+from math import prod
+from sympy import factorint
+def A000593(n): return prod((p**(e+1)-1)//(p-1) for p, e in factorint(n).items() if p > 2) 
+"	" a list of the multiplicities of the prime divisors of n in increasing order. For example, the multiplicities of the prime divisors of 6 are [1,1,1,1], but the multiplicities of the unique prime divisors of 12 are [2,2]
+""""""
+
+""""""print(functools.pow(1,37))
+print(functools.mul(2,2))
+print(fun"	" A000593(n). It is defined on the following page https://oeis.org/A000593 where the full description can be found.
+
+def A000332(n):
+Binomial Coefficients n over k:
+n! / (k! [n−k]!)
+https://oeis.org/A000332
+Give the number of combinations of n objects chosen from a set of k objects. The above code yields this sequence.
+
+"	 the n-th Bell number through a different means, rather than counting the number of permutations of a set.	" n where n is the product of distinct primes raised to some fixed power, under modulo 10^9 + 7.
+"""""""
+A000720	pi(n), the number of primes <= n. Sometimes called PrimePi(n) to distinguish it from the number 3.14159...	0,1,2,2,3,3,4,4,4,4,5,5,6,6,6,6,7,7,8,8,8,8,9,9,9,9,9,9,10,10,11,11,11,11,11,11,12,12,12,12,13,13,14,14,14,14,15,15,15,15,15,15,16,16,16,16,16,16,17,17,18,18,18,18,18,18,19,19,19,19,20,20,21,21,21,21,21,21	"
+from sympy import primepi
+for n in range(1,100): print(primepi(n), end=', ') 
+"	" in how many primes the number of the sequence, using a function primepi() from package sympy:
+
+Automate the Boring Stuff with Python by Al Sweigart
+
+>>> from sympy import primepi
+>>> primepi(6936)
+24
+
+
+def findPrimeStd(n: int) -> int:
+    sum = 0
+    for i in range(1, n):
+        if isPrime(i):
+            sum += i"	" a sequence of numbers corresponding to the number
+of prime numbers less than or equal to n.
+
+
+# Problem #7) Modules
+
+Using an appropriate search engine (e.g.: Google),
+describe how one can download and install Python modules written
+in C on Windows 10 Pro and Python v3.8.
+From https://stackoverflow.com/questions/20009948/is-there-a-way-to-install-additional-"	" a sequence whose n-th term is the number of primes less than or equal to n.
+
+def iter_factorial(n: int) -> int:
+    i, result = 1, 1
+    while i <= n:
+        result *= i  # Reduction operation that holds the second argument without producing a copy.result  # Multiplicative identity - we can replace this line with ""pass"" if it annoys you.result *= i  #"	" the number of primes up to a certain n, similar ti the algorithm below:
+
+sequence_iterator = iter(range(1, n+2)) # sequences will no longer go to infinity in Python 3.x! Now we must specify upper limit by hand!
+
+    def first_n_primes():
+        for num in sequence_iterator:
+
+            if isprime(num):
+                yield num  # this is where generator comprehension really shine through - generators can"
+A001023	Powers of 14.	1,14,196,2744,38416,537824,7529536,105413504,1475789056,20661046784,289254654976,4049565169664,56693912375296,793714773254144,11112006825558016,155568095557812224,2177953337809371136,30491346729331195904,426878854210636742656,5976303958948914397184,83668255425284801560576	" print([14**n for n in range(21)]) 
+"	" the powers of 14 that are less than 20.
+'''"	" a list of numbers equal to 14 to the power of 0, 1, 2, and so on up to, but not including 21.
+
+def exp(num: int) -> int:
+    res = [num ** p for p in range(21)]
+    return res
+Although the expression above seems like a bad idea at first, you may recognize that this is basically a generator, implemented as a simple recursive function (This is called a ""closure,"" and a type of"	" a list of values that clarify why big numbers get so big, very quickly.
+
+def fib3(n: int) -> int:
+    return 8675309**n
+    
+The above function generates the n-th Fibonacci number through a fun one-liner. Bear in mind of this statement from the preamble to this assignment: ""Recursion is usually not the best way to calculate Fibonacci numbers"" : ). Coding this up into an iterative"	" a list of the first 21 powers of 14.
+"""""""
+A001025	Powers of 16: a(n) = 16^n.	1,16,256,4096,65536,1048576,16777216,268435456,4294967296,68719476736,1099511627776,17592186044416,281474976710656,4503599627370496,72057594037927936,1152921504606846976,18446744073709551616,295147905179352825856,4722366482869645213696,75557863725914323419136,1208925819614629174706176	" print([16**n for n in range(20)]) 
+"	" a list of 20 linearly increasing exponents.
+%%writefile exec_fib_pytest.py
+
+def fib1(n: int) -> int:
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a+b
+    return b
+
+def fib2(n: int) -> int:
+    if n == 0 or n == 1:
+        return n
+    else"	" a list of the powers of 16 from 0 to 16^19.
+
+squares = []
+for num in range(10):
+    if num % 2 == 0:
+        squares.append(num * num)
+print(""There are "" + str(len(squares)) + "" even values."")
+The above code generates the squares of all of the even numbers between 0 and 10, inclusive. The second line uses a one-line for loop to add all of"	" the powers of 16 needed to sum all of the first 20 Fibonacci numbers.
+'''"	" a list of numbers according to the following rule: for every n, set the n-th value in the list to 16 to the power of n.
+
+[n ** 3 for n in range(20)]
+The above code generates a list of Fibonacci values up through the 20th value and it seems very inefficient compared to fib1() or fib2(). This is due to nested iteration introduced by requiring each element be squared (by appending [element**2] at the"
+A001128	Reverse digits of previous term and multiply by previous term.	2,4,16,976,662704,269896807264,124883600543123110859968,108643488775144622666209173128243503963147630528	" def a(n): return 2 if n<2 else a(n - 1) * int(str(a(n - 1))[::-1]) 
+"	" the n-th number of a known sequence of numbers. The sequence is ""2, 11, 202, 3111,...."".
+
+fib(n: int) -> int:
+
+The above code declares a function that generates the n-th Fibonacci number. The last digit of the n-th number is the same as that of n-2.
+
+def LastDigitofNAfter1(n: int) -> int:
+    a, b"	" the n-th Fibonacci number through an iterative method, described below:
+
+Substitute for 0, 1 and 2. Substitute for 0 and 1, where necessary. For n > 2, recursively call a(n - 1) * int(str(a(n - 1))[::-1]). Where necessary, substitute this into the recursive call above per the instructions.
+
+"""""""	" the n-th number given in <http://oeis.org/A000668>.
+'''),
+
+    ('Q2', 'Could you write a function which generate fibonacci series using generator for range(101)?\n'
+           '\n'  # since there are two questions in one text, before the second question start it should print \n to move the cursor after prompt
+           'e.g. loop_fibonacci(50) ->"	" the n-th Tribonacci number through recursion, described below:
+
+Set initial seed values for 0 and 1. The function should return 2 if n is less than 2. Otherwise, returns the product of a(n - 1) and a(n - 2), which are defined in python as the reverse string of themselves, cast to integers then related. Because this involves repeated calculations—like those in the Fibonacci sequence—it will be faster (as it takes lesser time"
+A001129	Iccanobif numbers: reverse digits of two previous terms and add.	0,1,1,2,3,5,8,13,39,124,514,836,1053,4139,12815,61135,104937,792517,1454698,9679838,17354310,9735140,1760750,986050,621360,113815,581437,1252496,7676706,13019288,94367798,178067380,173537220,106496242,265429972,522619163	"
+A001129_list, r1, r2 = [0,1], 1, 0
+for _ in range(10**2):
+    l, r2 = r1+r2, r1
+    r1 = int(str(l)[::-1])
+    A001129_list.append(l) 
+"	" the sequence of mirror sequences.
+""""""
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+75025
+121393
+196418
+317811
+514229
+832040
+1346269
+2178309
+3524578
+57028"	" a list of the first 10000 numbers in the reverse of the Fibonacci sequnce.
+""""""
+
+
+def test_fibo():
+    assert str(A001129_list[23]) == F(""104672536"").split('.')[1]"	" the A001129 sequence [https://oeis.org/A001129] which is the ""index of first occurrence of n as a decimal digit (counting from the end).""
+The sequence can be generated efficiently using an iterative or recursive method, specifically through a simple loop but requiring far fewer individual function calls than fib2(n). We do not specify here how (and if) to implement this approach.
+
+def fib3(n: int) -> int:
+"	" a sequence of integers with the first 10 elements known as Reverse Fibonacci numbers.
+
+n1: int = 1  # starting number (alternatively, start from first element in A001129_list)
+n2: int = 2  # length of list to return - real differences between the two get too large for me to handle nice pretty-like... like turning a circle into a fraction lolz deelio i'm pretty handicapped haHAAHAHA - SO WE"
+A001157	sigma_2(n): sum of squares of divisors of n.	1,5,10,21,26,50,50,85,91,130,122,210,170,250,260,341,290,455,362,546,500,610,530,850,651,850,820,1050,842,1300,962,1365,1220,1450,1300,1911,1370,1810,1700,2210,1682,2500,1850,2562,2366,2650,2210,3410,2451,3255	"
+from sympy import divisor_sigma
+def a(n): return divisor_sigma(n, 2)
+print([a(n) for n in range(1, 51)]) 
+"	" the first 50 values of the odd-powered divisor sum function.
+""""""
+""""""
+p-Massey (1927) TeXGo read by GoGu Instructions
+Updated to R version 7.2 omitting, character codes, and math version
+
+More manual reading, math version as indicated and code bullets
+
+http://www.wsp-computational-geometry.net/notes/intro/files.html
+Introduction to Computational Geometry in"	" a sequence. The 50th item in the sequence is an important number (here labeled a(n) for a function of n). Can you find it using only integer arithmetic?
+""""""
+import operator
+with open(""q3.txt"") as f:
+    c = f.readline()
+    
+c = c[len(""Your code goes here:\n"")+1:]
+c = list(map(int, c.split()))
+""""""
+I propose"	" the list of divisor sums, given that divisor_sigma is the sum of the proper divisors of a single integer n.
+
+a above is correct because any positive integer n can be written as either {sum([k for k in range(1,n) if n % k == 0])} or {n + 1 - (1 + sum([l for l in range(2, math.floor((n)/2)+1) if (n"	" a list of the amount of numbers below 50 that have a total number of divisors less than or equal to n.
+'''"
+A001158	sigma_3(n): sum of cubes of divisors of n.	1,9,28,73,126,252,344,585,757,1134,1332,2044,2198,3096,3528,4681,4914,6813,6860,9198,9632,11988,12168,16380,15751,19782,20440,25112,24390,31752,29792,37449,37296,44226,43344,55261,50654,61740,61544,73710,68922,86688	"
+from sympy import divisor_sigma
+def a(n): return divisor_sigma(n, 3)
+print([a(n) for n in range(1, 43)]) 
+"	" the sequence of the sum of the cubes of the divisors of n.
+For example, a(1) + a(2) + a(3) == 6 because the divisors of 1 are {1} and 1^3 = 1;
+similarly, the divisors of 2 are {1, 2} and 2^3 = 8; therefor the sum is 6.
+We can do this through the divisor sigma function.
+
+"	" values for the divisor sigma function in difference (A000010). See more online.
+from pynverse import inversefunc
+def derive(y, x=symbols('x')):
+    dydx = y.diff(x)
+    print(r""\frac{{dy}}{{dx}} = {}"".format(dydx))
+
+from sympy import *
+derive(x**3+1, x)
+"	" the list [1, 3, 12, 54, 252...] that displays the n-th term for each n between 1 and 42. 
+""""""
+# a(1) = primer number: 1 (coprime to every number). Only divisor is itself
+# a(2) = second prime or sexy prime: 2 (twice a square). Divisors are 1 and 2 - the only numbers coprime to it are itself and 1. Aka its"	" a list of the multiples of 3 between 0 and 42. Such a number is known as a Blum integer, where 3 is the square-free part (in this case 1) and it should not be divisible by 4. This computation in sympy is done using divisor_sigma().
+
+In most problems involving prime numbers, one uses inclusion-exclusion with the nth term calculated separately from the rest becoming Pr(1), where 2 ≤ p  ≤ n"
+A001221	Number of distinct primes dividing n (also called omega(n)).	0,1,1,1,1,2,1,1,1,2,1,2,1,2,2,1,1,2,1,2,2,2,1,2,1,2,1,2,1,3,1,1,2,2,2,2,1,2,2,2,1,3,1,2,2,2,1,2,1,2,2,2,1,2,2,2,2,2,1,3,1,2,2,1,2,3,1,2,2,3,1,2,1,2,2,2,2,3,1,2,1,2,1,3,2,2,2,2,1,3,2,2,2,2,2,2,1,2,2,2,1,3,1,2,3,2,1,2,1,3,2	"
+from sympy.ntheory import primefactors
+print([len(primefactors(n)) for n in range(1, 1001)])  
+"	" a list of the prime factorizations of the numbers 1 to 1000. 
+
+If we visualize this list as a numpy ndarray, we get the following diagram:
+
+[[   1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20]
+ [    2    3    4    5    6    8   10   12   14"	" a list of the length of a prime factorization of all numbers between 1 and 1000 (inclusive, not exclusive).
+
+print([binomial(1000, i) for i in range(500)])
+The above code generates a list of the binomial coefficient of x**y: how many ways are there to pick x elements out of a set of y elements.
+'''
+import math
+import sieve
+def isPrimeAlone(number):
+	prim=["	 the list of number of prime factors (by calling the built-in help ) for numbers 1- to 100. For example, the numbers 1, 2, 3 and 5 all have only 1 prime factor each (namely themselves), while the numbers 4 and 6 have 2 prime factors each. The first 10 terms in this list are [1, 2, 3, 2, 4], [1 ,2 ,4 ], [1 ,3 ], [1 ,2 ,2 ],[1],	" a list of the number of prime factors of each integer from 0 to 1000.
+'''"
+A001370	Sum of digits of 2^n.	1,2,4,8,7,5,10,11,13,8,7,14,19,20,22,26,25,14,19,29,31,26,25,41,37,29,40,35,43,41,37,47,58,62,61,59,64,56,67,71,61,50,46,56,58,62,70,68,73,65,76,80,79,77,82,92,85,80,70,77	" [sum(map(int, str(2**n))) for n in range(56)] 
+"	" a list of numbers which represent the sum of the digits in the number 2^n.
+
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if x==0:
+            return 0
+        if x==1:
+            return 1
+        if n<0:
+            return float(1/self.myPow(x,-n))
+        else:
+            if n==0:"	" a list of Fibonacci numbers only 55 (not 56) numbers in length. The list shown above represents the Fibonacci numbers for each index. You may use this list if you wish, but it is not necessary to use it.
+Consider the following n-size permutations of 2 and 3:
+The sum of all of the possible values, should be 0, i.e. no duplication in the permutation.
+""""""
+
+
+
+def num_dup(array"	" the solution.
+""""""
+# %%"	" all the digits of a number represented as an array.
+
+For example: 868 = [8, 6, 8] -> 64+62+84 = 154.
+'''
+
+
+def fib_prev(n): return list(itertools.islice(fibonacci(), n))[-1]
+
+
+def powerSet(combination_list): return itertools.chain(*map(lambda x: itertools.combinations (set ("
+A001591	Pentanacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4) + a(n-5), a(0)=a(1)=a(2)=a(3)=0, a(4)=1.	0,0,0,0,1,1,2,4,8,16,31,61,120,236,464,912,1793,3525,6930,13624,26784,52656,103519,203513,400096,786568,1546352,3040048,5976577,11749641,23099186,45411804,89277256,175514464,345052351,678355061,1333610936,2621810068	"
+def pentanacci():
+    a, b, c, d, e = 0, 0, 0, 0, 1
+    while True:
+        yield a
+        a, b, c, d, e = b, c, d, e, a + b + c + d + e
+f = pentanacci()
+print([next(f) for _ in range(100)]) 
+"	" the first 100 elements of a ""Pentanacci"" sequence:
+
+Initial values a, b, c, d, and e are 0, 0, 0, 0, and 1 respectively. Then, the sequence is defined as the following recurrence relation, with the ith element of the sequence as the term:
+
+ϕ_i = aϕ_i−5 + bϕ_i−4 + cϕ_i−3 + dϕ"	" a sequence similar to Fibonacci's, but whose n-th number is the n-th term in the pentanacci sequence.
+
+Check out this link for more details about fibonnaci numbers and the pentanacci series.
+
+
+'''"	" the pentanacci numbers, using a generator function.
+1. Choose any list of number n, where n <= 25 (You may use the range function to help you with this). Store this list in a variable called numbers.
+2. Print the 3rd element in the list: your answer should be 3!
+3. Create another list containing 2-element pairs of all your favorite colors (e..g [(0,'red'),(1,'orange')...etc.]). To"	" a function that returns an incremental sequence of pentanacci numbers. I assigned the initial values to be 0, above and then called f = pentanacci(). By plugging this argument into next(f) for a 100 iterations, we get the first 100 pentanacci numbers.
+
+Your goal is write your own version of the fib2() recursive algorithm in terms of recursion! We've provided you with an example call. What does it generate? Does it follow the logic below?"
+A001597	Perfect powers: m^k where m > 0 and k >= 2.	1,4,8,9,16,25,27,32,36,49,64,81,100,121,125,128,144,169,196,216,225,243,256,289,324,343,361,400,441,484,512,529,576,625,676,729,784,841,900,961,1000,1024,1089,1156,1225,1296,1331,1369,1444,1521,1600,1681,1728,1764	"
+from sympy import perfect_power
+def ok(n): return n==1 or perfect_power(n)
+print([m for m in range(1, 1765) if ok(m)]) 
+"	" every n-th perfect number from 1 to 1765 that is also a Fermat liar. The previous code can be found in the references.
+
+references:
+
+Blackburn, D., Crandall, K., Crandall, C., Niederreiter, K. (1994). $Probabilistic answer procedures: A study of probabilistic heuristics for dichtomy-based classification hard problems(Proceedings-Florida State University Conference on"	" a list of numbers between 1 and 1765 that are either equal to 1 or exhibit perfect powers from 2 to 5.
+"""""""	" the first 1765 numbers that are either 1, or 2**n - 1 (for some n).
+
+def recurring_cycle(r: int) -> int:
+
+    mod = []
+
+    i = 0
+    while r not in mod:
+        any([mod.append(r*10**i % d) for d in [2, 5]]) # choose to append the right-most digit of a number multiplied by 10^n and the remainder of 10"	" a list of numbers where n is a perfect square, except that n can only be a positive whole number. For example:
+
+print([m for m in range(1, 100) if perfect_square(m)])
+will print [4]."
+A001622	Decimal expansion of golden ratio phi (or tau) = (1 + sqrt(5))/2.	1,6,1,8,0,3,3,9,8,8,7,4,9,8,9,4,8,4,8,2,0,4,5,8,6,8,3,4,3,6,5,6,3,8,1,1,7,7,2,0,3,0,9,1,7,9,8,0,5,7,6,2,8,6,2,1,3,5,4,4,8,6,2,2,7,0,5,2,6,0,4,6,2,8,1,8,9,0,2,4,4,9,7,0,7,2,0,7,2,0,4,1,8,9,3,9,1,1,3,7,4,8,4,7,5	"
+from sympy import S
+def alst(n): 
+  return list(map(int, str(S.GoldenRatio.n(n+1)).replace(""."", """")))[:-1]
+print(alst(105)) 
+"	" the Fibonacci sequence up to a specified term.
+
+def fib(n: int) -> list:
+    return fib(n-1) + [n] if n > 0 else [0]
+
+The above function takes a specified term, and generates a Fibonacci sequence.
+
+Solution Hints
+Solutions can be found in the solutions folder. To see the solutions, rename the solutions.py file and rename back to solutions.py. Renaming the"	" the list of digits of the n-th Fibonacci number denoted by alst(n), according to the below formula:
+
+\[ \left\{ \begin{array}{l} \frac{\varphi^n - (-\varphi)^{-n}}{\sqrt{5}} \\ =\sum^n_{k=0}\frac{1}{\varphi^k(1,-1)} \end{array} \right. \]"	" the golden ratio in base 1~11.
+print(alst(106))
+
+The above code takes the Output in previous question, [55] which is meant to generate Golden Ratio.
+It then removes the decimal point and reduces everything to a string for all powers greater than 10 are zero as far as Python is concerned as powers of greater than zeros are too small to display via float representation so are rounded down to zero, followed by conversion into integers and stored in a list.'"	 the first 100 digits of the Fibonacci sequence. It uses Sympy S, a Python library for symbolic computing and returns an ordered list of those 100 numbers as integers. If you wish to check this project in Sympy you can import alst however your output from running fib() may differ. That does not have to be the case if 'symbolic' is taken out of fib() when defining it since symbolic computation is also required at creation time so that interupting tests
+A001651	Numbers not divisible by 3.	1,2,4,5,7,8,10,11,13,14,16,17,19,20,22,23,25,26,28,29,31,32,34,35,37,38,40,41,43,44,46,47,49,50,52,53,55,56,58,59,61,62,64,65,67,68,70,71,73,74,76,77,79,80,82,83,85,86,88,89,91,92,94,95,97,98,100,101,103,104	"
+print([k for k in range(1, 105) if k%3]) 
+"	" a list of numbers that is divisible by three between 1 and 100. It does so by defining a list of numbers from 1 to 109 (inclusive), [1...100], then returning the list of numbers that are divisible by 3.
+
+# example 2
+# let's devide it into 4 groups
+[x for x in range(100) if x%4==1] 
+
+# showing the values from group 1
+[x for x in range("	" a list of Fibonacci numbers less than 100. 
+
+[a for a in [1, 2, 3, 4] if a > 2]
+
+        #a for a in [[1, 2], [3, 4]] if sum(a) > 3))"	" a list of Fibonacci numbers that are divisible by 3. Note that this task is not easy to do with only loops and if statements, and it may be better accomplished through recursion.
+  Given two sorted lists lst1 and lst2, merge the lists, so they still contain all of the same elements as in both, along with the sort order being preserved. A merged list is returned containing all elements from lst1, followed by elements from lst2 ("	" all the numbers that are divisible by 3 between 1 and 105.
+""""""
+
+
+a = 50 # <= a is local to the function in which it was declared -------------\ |   Python uses namespaces for all functions, classes, libraries (such as math or sympy) defined magically somehow. The variables 'k','e' outside the for loop below will have no effect on them
+b = 100  # b is local to hmm() ---------------------------------------------------/
+
+
+class"
+A001654	Golden rectangle numbers: F(n)*F(n+1), where F(n) = A000045(n) (Fibonacci numbers).	0,1,2,6,15,40,104,273,714,1870,4895,12816,33552,87841,229970,602070,1576239,4126648,10803704,28284465,74049690,193864606,507544127,1328767776,3478759200,9107509825,23843770274,62423800998,163427632719	"
+from sympy import fibonacci as F
+def a(n): return F(n)*F(n + 1)
+[a(n) for n in range(101)] 
+"	" the nth Fibonacci number using a Perfect Square(zeta) method, described below: 
+
+The answer is given by a(n) = (5**(-√(5))) * (((1 + √(5))(1 + √(5))**n) / 2**n + (1/√(5))(1 + √(5))**n) * (((1 - √(5))(1 +"	" the n-th Fibonacci number through mathematical calculations, and is the fastest!
+
+sum = 0
+fibs = [0, 1] # 1, 2
+F = 15
+for i in range(2, F):
+	temp = fibs[i-2] + fibs[i-1]
+	fibs.append(temp)
+	print(i, temp, fibs)
+	if temp % 2 == 0:
+"	" the first 100 Fibonacci numbers and multiplies them by their respective index values to determine their sum.
+import os
+import csv
+dir(csv)
+"	" the Fibonacci numbers using symbolic computations.
+'''"
+A001690	Non-Fibonacci numbers.	4,6,7,9,10,11,12,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30,31,32,33,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78	"
+def f(n):
+    a=1
+    b=2
+    c=3
+    while n>0:
+        a=b
+        b=c
+        c=a+b
+        n-=(c-b-1)
+    n+=(c-b-1)
+    return (b+n)
+for i in range(1,1001):
+    print(str(i)+"" ""+str(f(i))) 
+"	" the n-th number of the Fibonacci sequence. The code uses a while loop to iteratively calculate the next Fibonacci number, which is appended to a string and then printed.
+
+The while loop iterates until n becomes negative, as per the mathematical formula for the n-th Fibonacci number, described below:
+
+def fib(n):
+ b=1.61803
+ return int(round(((b**n)-((1-b)"	" the largest first digit of the sum of i increasingly large positive Fibonacci sequence growing at 3rd order (a1, a2, a3), where a3 = a1 + a2; a1 and a2 each continuously increase by 1 with respect to the previous term in the sequence. It only takes slight modifications to generate fib sequences with exponents other than 3.
+    
+Using this last fact, we can implement our own iterative Fibonacci function with much greater efficiency"	" the n-th Fibonacci number using an iterative sequence generator algorithm, described below:
+
+Define sequence_iterator to be iter(range(1, 1001)). Then, loop for n many iterations. In that loop, print the string representation of i and the string representation of f(i). This results in quite some output... can you spot a pattern?
+
+    #from 0 to 610
+
+    fib1: You beat Chuck Norris by 0 numbers. Yet another way"	" a sequence of numbers. For i up to a value of 100, it demonstrates every element in the fib() and f() sequences generated by the OBO prize-winning papers above.
+"
+A001703	Decimal concatenation of n, n+1, and n+2.	12,123,234,345,456,567,678,789,8910,91011,101112,111213,121314,131415,141516,151617,161718,171819,181920,192021,202122,212223,222324,232425,242526,252627,262728,272829,282930,293031,303132,313233,323334,333435,343536,353637,363738	" for n in range(100): print(int(str(n)+str(n+1)+str(n+2))) 
+"	" the 100th numbers in the range of 0-99, and then turns the ints to strings, concatenates the strings and then turns the result back to an int.
+
+for n in range(10): print(bin(n)) print(oct(n)) print(hex(n))
+
+The above code generates all the binary octal and hexadecimal representations of the 0-9 in the range.
+
+print(bin(15))
+print("	" the length of the string representation of all three-digit integers.
+
+I am going to need a sentence that has every possible character combination in it. It should have an a, two b's, four c's, and so on, for each letter from a to z. Below I will explain my code.
+
+first let's do one example like this:
+a = ['a'*i for i in range(1,27)]
+
+In the above code chunk,"	" a value for every integer up to and including 100 through a method described below:
+
+As tuples cannot be modified, to create new values for each successive integer, modify the final three digits of the preceeding loop's last term. First convert n into three spaced characters (i.e. ""0123"" would become "" 0  1  2  "") and join them as a string (which allows for operator overloading). Then modify the final digits according to these rules,"	" numbers that contain the Fibonacci sequence via string manipulation.
+"""""""
+A001704	a(n) = n concatenated with n + 1.	12,23,34,45,56,67,78,89,910,1011,1112,1213,1314,1415,1516,1617,1718,1819,1920,2021,2122,2223,2324,2425,2526,2627,2728,2829,2930,3031,3132,3233,3334,3435,3536,3637,3738,3839,3940,4041,4142,4243,4344,4445,4546	" for n in range(1,100): print(str(n)+str(n+1)) 
+"	" all n-n pairs (1-2,2-3,3-4,...,100-101) given a number n.
+'''"	" a series of integers from 1 to 99, inclusive. 
+Handed in by Aaron. Wrote out all numbers pretty easily, not even sure if it's right. 
+'''
+
+
+# set seed for random number generator
+random.seed(323423)
+
+# generate random numbers between 0-1000 inclusive, set them equal to zipcode_list
+pageview_list = [random.randint(0, 1000) for i in range(40)]"	" a sequence of numbers between 1 and 100 each made up of a consecutive order pair. The first number is the larger, the second is the smaller. StopIteration signals that all pairs have been generated."""""""	" all consecutive fibonacci numbers between 1 and 100 (n, n+1) using an iterator.
+
+
+Timing Speed Test
+The following code tests for time speed for the three above methods of generating Fibbonacci numbers over a user-input integer range, with benchmark results printed as it runs:
+"""""""
+A001974	Numbers that are the sum of 3 distinct squares, i.e., numbers of the form x^2 + y^2 + z^2 with 0 <= x < y < z.	5,10,13,14,17,20,21,25,26,29,30,34,35,37,38,40,41,42,45,46,49,50,52,53,54,56,58,59,61,62,65,66,68,69,70,73,74,75,77,78,80,81,82,83,84,85,86,89,90,91,93,94,97,98,100,101,104,105,106,107,109,110,113	"
+from itertools import combinations
+def aupto(lim):
+  s = filter(lambda x: x <= lim, (i*i for i in range(int(lim**.5)+2)))
+  s3 = set(filter(lambda x: x<=lim, (sum(c) for c in combinations(s, 3))))
+  return sorted(s3)
+print(aupto(113)) 
+"	" strictly non-negative integers that are equal to the square of some non-negative integer.
+i.e. {0, 1} -> {0, 1} 
+      {0, 4} -> {0} 
+      {0, 9} -> {0, 4} 
+      {0, 16} -> {0} 
+      {0, 25} -> {0, 4} 
+      {1, 1} -> {1} 
+"	" a list of all numbers <= 113 that can be written as the sume of 3 squares.
+# Dynamic Programming | Set 45 (Longest Increasing Subsequence)
+Given an array, find the length of the longest increasing subsequence from a given sequence .
+The longest increasing subsequence means to find a subsequence of a given sequence in which the subsequence's elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. This subsequence is"	" all the numbers of the form a + b^2 + c^3, where 0 < a < 113, 0 < b, c
+
+{i ** i for i in range(15)}
+The above code is used to generate Pythagorean triples in O(1). This set can be generated more efficiently with Euclid's formula. However, due to its mathematical origin, it might find use cases in non-mathematical problems.
+
+
+def aupto("	" all elements of the arithmetic sequence 1, 9, 17... that are squared and below 113. This code is faster than our original attempt as it utilizes a combination of all numeric list elements less than, or equal to (call this = lambda x: x <= lim)(list_element) <b>x</b>. It takes set union with mutable containers discussed earlier in order to eliminate duplicates.<br>
+However, what if we wanted this code returned for integers $\geq$"
+A002113	Palindromes in base 10.	0,1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,101,111,121,131,141,151,161,171,181,191,202,212,222,232,242,252,262,272,282,292,303,313,323,333,343,353,363,373,383,393,404,414,424,434,444,454,464,474,484,494,505,515	"
+def A002113_list(nMax):
+  mlist=[]
+  for n in range(nMax+1):
+     mstr=str(n)
+     if mstr==mstr[::-1]:
+        mlist.append(n)
+  return(mlist)
+"	" the negative base-10 versions of the positive integers
+""""""  
+
+def fib(n: int) -> int:
+    """"""
+The function fib() yields either the n-th Fibonacci number iteratively, OR
+the n-th Fibonacci number recursively. The two are given as follows.
+    """""" 
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a+b"	" the A002113 sequence, described below:
+
+n is defined for all nonnegative integers. Define mstr to be the string-converted n. If mstr is equal to its reverse (e.g ""98"": 9898), then append n to the list mlist. Finally, return the completed mlist afterwards.
+"""""""	" reading order numerical palindromes (left/right aligned) from 0 to nMax, inclusive.
+'''
+nlist = []
+
+
+# #Task 2: Write a Lesson 1 Task 4 solution that handles iterating in reverse over the Fibonacci numbers when their index is itself a Fibonacci number (i.e., spawns a new Fib seqeuence)
+def task4():
+    nlist.append(0)  # Set init values a and"	" the set of numbers for A012108's values, by only inputting an integer N (or nMax) as the paramater. It does so through a generator.
+
+def generate(start=0):         # 0 or other number to start from... default is 1 --> Need if some problem to output it includes zero???
+    count = start               # takes value of '0' passed ot it ?????
+
+    while True:                 # infinite loop - breaks at return statement"
+A002113	Palindromes in base 10.	0,1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,101,111,121,131,141,151,161,171,181,191,202,212,222,232,242,252,262,272,282,292,303,313,323,333,343,353,363,373,383,393,404,414,424,434,444,454,464,474,484,494,505,515	"
+from itertools import chain
+A002113 = sorted(chain(map(lambda x:int(str(x)+str(x)[::-1]),range(1,10**3)),map(lambda x:int(str(x)+str(x)[-2::-1]), range(10**3)))) 
+"	" a list of the reverse-ordered and sorted Fibonacci numbers through the module itertools, imported in a chain as described here.
+'''"	" and returns a list of all numbers composed of 1 to 3 digits that are both lychrel numbers (a lychrel number is one that, when added to its reverse, is not palindromic, or a palindrome).
+
+def polygon(n: int = 10) -> int:
+
+The above code randomly generates and returns an integer between 1 and n inclusive.
+"""""""	" all numbers under 1,000 which are subsequently palindromic as strings (re.ex., 23 is palindromic, as is 22322), and then sorts that list.
+
+import math
+all([math.sqrt(i) % 1 == 0 for i in range(1, 10000)])
+The above code checks whether each number from 1 to 9999 has a square root irrationality of 0 (that is, whether the square root of any natural number does"	" all the odd-length palindromes with more than one digit. However, it's incomplete in that with high values of list_element (such as 1000), division presents a problem, since we're only dealing with integers and not floats. To avoid this issue we want to include both all the positive integer palindromes till 100!
+import math
+def p003(n: int) -> int:
+    l = [x for x in range(0, n+"
+A002113	Palindromes in base 10.	0,1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,101,111,121,131,141,151,161,171,181,191,202,212,222,232,242,252,262,272,282,292,303,313,323,333,343,353,363,373,383,393,404,414,424,434,444,454,464,474,484,494,505,515	"
+from itertools import chain, count
+A002113 = chain(k for k in count(0) if str(k) == str(k)[::-1])
+print([next(A002113) for k in range(60)]) 
+"	" the integer going by the book of ""A002113"". This integer is the sequence of coefficients of the polynomial with integer coefficients
+that generate the Fibonacci numbers. This sequence is given as
+
+f(n) = a(n)*f(n-1) + f(n-2)
+
+def A002113(n):
+    def A002113m1(n):
+        return a(n-1)*A002113(n-"	" the A002113 sequence, described here: https://oeis.org/A002113
+
+Which of the two functions will you put in fib (having imported it from your solution to question 1)?
+""""""
+
+
+TEST = 'large'
+IN = 'A-{}.in'.format(TEST)
+OUT = 'A-{}.out'.format(TEST)
+
+
+from collections import deque
+
+
+class Game(object):
+    def __"	" the 60'th sequence in the A002113 sequence, as described below:
+
+The code creates an infinite generator for every non-negative integer that is a palindrome. Then we call hundred integers multiple times and print their values. (Source)
+""""""
+
+
+from itertools import chain, count
+
+
+A002113 = chain((k for k in count(0) if str(k) == str(k)[::-1]))
+
+
+print([next"	" the A002113 sequence, defined as follows:
+
+
+Append the digits of each positive integer to a list, assign that list to all_ints.
+Print the n-th element in all_ints (from 1), where n is specified by k (in this case, 3k). This code has three blocks: chain(), count() and next(). These blocks work together as described below:
+1. The first block, chain((k for k in count(0) if"
+A002385	Palindromic primes: prime numbers whose decimal expansion is a palindrome.	2,3,5,7,11,101,131,151,181,191,313,353,373,383,727,757,787,797,919,929,10301,10501,10601,11311,11411,12421,12721,12821,13331,13831,13931,14341,14741,15451,15551,16061,16361,16561,16661,17471,17971,18181	"
+from itertools import chain
+from sympy import isprime
+A002385 = sorted((n for n in chain((int(str(x)+str(x)[::-1]) for x in range(1,10**5)),(int(str(x)+str(x)[-2::-1]) for x in range(1,10**5))) if isprime(n))) 
+"	" all the possible edge cases for the prime checker. It is interesting to note that if you were making a prime checker that was intended for pasting onto another function, you could instead just skip test values that are already prime such as 1337 and 8191 (which is fairly early on in the above list), but it is not necessary.
+
+
+def prime_place(n: int) -> str:
+    
+The above code declares a function that determines the place of a given"	" a sorted list containing the decimal palindromes with 7 digits of which at least 1 is a prime number.
+"""""""	" the sequence shown below: A002385
+'''"	" the list of the circular primes below 10^5.
+
+import scipy.misc as cache  # Note that ""cache"" had to be imported this way because we want evaluators (like f, g, h) to call and return functions like fact, fib2, A002385 recursively. Vulture can catch exec calls which would only catch selected(). However it cannot cactch cached_value calls wich appears in all calling code when using eval"
+A002407	Cuban primes: primes which are the difference of two consecutive cubes.	7,19,37,61,127,271,331,397,547,631,919,1657,1801,1951,2269,2437,2791,3169,3571,4219,4447,5167,5419,6211,7057,7351,8269,9241,10267,11719,12097,13267,13669,16651,19441,19927,22447,23497,24571,25117,26227,27361,33391	"
+from sympy import isprime
+def aupto(limit):
+    alst, k, d = [], 1, 7
+    while d <= limit:
+        if isprime(d): alst.append(d)
+        k += 1; d = 1+3*k*(k+1)
+    return alst
+print(aupto(34000)) 
+"	" all primes from 7 up to a specified limit, where the selected limit is that given by the Geogebra expression 1+3*k*(k+1).
+
+'''"	" the prime numbers less than or equal to a given limit by first generating all coprime odd integers and then checking whether they are prime.
+
+def dotproduct(u, v):
+    return sum([x*y for (x, y) in zip(u, v)])""""""
+
+
+# fibonacci
+def fib(n):
+  if n == 0:
+    return 1
+  elif n == 1:
+    return 1
+  else:"	" the primes in the Wolfram Alpha page for ""List of primes"" shown as below, used to test this exercise:
+
+http://www.wolframalpha.com/input/?i=list+of+primes
+
+"	" prime numbers in ascending order. For example, it only needs to find all primes up to the 
+34000th prime number (when d == 35361) when passed a limit of 1,219,089 to return the last valid index from this function.
+'''"
+A002779	Palindromic squares.	0,1,4,9,121,484,676,10201,12321,14641,40804,44944,69696,94249,698896,1002001,1234321,4008004,5221225,6948496,100020001,102030201,104060401,121242121,123454321,125686521,400080004,404090404,522808225	"
+A002779_list = [int(s) for s in (str(m**2) for m in range(10**5)) if s == s[::-1]] 
+"	" a list of all squares (m**2) with the same first and second digits, defined as the length of the string of the square of m is 2 less than the length. The choice of using strings is justified by the fact that the string m**2 will always be the same length as m.
+
+import urllib3 
+url = 'https://projecteuler.net/project/resources/p096_sudoku.txt'
+http = ur"	" the first D in A002779. Here is the description of A002779:
+
+To find the digits in this sequence, start with two integers a and b. If a<b, then C(a) = b and C(b) = a + 1. Otherwise, if a>=b, then either b=a-1 (if the digits of a are palindromic) or a=-a (if not). Find the remaining ""D's"	" a list of palindromic squares less than 10^5.
+
+For iteration i, the iterator yields the string of the ith Fibonacci number converted to an integer, called a. Then i is increased by 1, which causes progam flow to go back up to line 11 and continue iterating (i ** 2). If a is equal to its mirror (the mirrored number produced through a = int(str(a)[::-1])), then 10 ** 5 is"	" the sequence of square numbers that produce a palindromic value.
+
+def P(n): # Sum root to leaf paths where each path is no more than some integer depth d: C_1^d * (2**n - 1) // n ** 2 + 1. 
+    s = 0
+    while n:   sum += F(n % 10, d-1)  if n >=10 else sum+root[n] == delat mapi"
+A002796	Numbers that are divisible by each nonzero digit.	1,2,3,4,5,6,7,8,9,10,11,12,15,20,22,24,30,33,36,40,44,48,50,55,60,66,70,77,80,88,90,99,100,101,102,104,105,110,111,112,115,120,122,124,126,128,132,135,140,144,150,155,162,168,175,184,200,202,204,208,210,212	"
+A002796_list = []
+for i in range(1,10**5):
+    for d in set(str(i)):
+        if d != '0' and i % int(d):
+            break
+    else:
+        A002796_list.append(i) 
+"	" a list of numbers, A047994_list, which contains numbers n such that when n, n+1 and n+2 are all concatenated together produce a pandas pandas_profiling_list of length n. Pandas_profiling_list is returned as an empty list.
+
+!pip install pandas_profiling --upgrade
+
+def pandas_profiling_list(n: int) -> list:
+    import pandas_"	" a list of 1 through 10,000 that only contain unique digits.
+"""""""	" a list of the part of 0 to 10,000 that contain an endless arithmetic sequence.
+A002796_sequence = ''.join(str(n) for n in A002796_list) # = 1.2345667890e+129
+'''"	" up to 10**5 primes starting from 1000017, using the A002796_list variable.
+[            [1],                [[2]]          ]
+[    [3][3],  [9],[9],[31]   ],   [[4],[[8]][6]]  ]
+When appended like this: [[2]+g,[7]+i???111?+a,'0'+f???114?-[33]] , we get 3 first"
+A003098	Palindromic triangular numbers.	0,1,3,6,55,66,171,595,666,3003,5995,8778,15051,66066,617716,828828,1269621,1680861,3544453,5073705,5676765,6295926,35133153,61477416,178727871,1264114621,1634004361,5289009825,6172882716,13953435931	"
+A003098_list = [m for m in (n*(n+1)//2 for n in range(10**5)) if str(m) == str(m)[::-1]] 
+"	" a list of the m-th hexagonal numbers for m less than 10**5.
+
+from math import ceil, sqrt
+from collections import defaultdict
+from itertools import islice
+from operator import itemgetter
+
+def is_pentagonal(number: int) -> bool:
+    h = ceil((sqrt(1+24*number) - 1)/6)
+    return True if h*(3*h-1)"	" the sequence A003098 which is the list of numbers m such that m and its mirror image about the center of the number line, m and m are palindromes. i.e., an element in A003098 passes this test:
+31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 . . . . . . . . . . . . . . . . . ."	" a string up to 10**5 long that is itself a palindrome.
+
+
+def int_str_palindromes(n: int) -> list:
+    return [i for i in range(1, n + 1) if str(i) == str(i)[::-1]]
+    The above code generates a list of numbers from 1 to n (inclusize) of type integers that are themselves palindromes. That is, if you"	" a list with all palindromic numbers of the Fibonacci sequence up to 10^5. It is a non-trivial example of list comprehension in Python which shows how convenient it can be to generate data that fits an explicit formula.
+
+For additional examples, please visit </topics/applications/fibonacci>`_ on this website's Indices page.'''), {'format': EntryType.CODE}
+
+    def _proofs"
+A003132	Sum of squares of digits of n.	0,1,4,9,16,25,36,49,64,81,1,2,5,10,17,26,37,50,65,82,4,5,8,13,20,29,40,53,68,85,9,10,13,18,25,34,45,58,73,90,16,17,20,25,32,41,52,65,80,97,25,26,29,34,41,50,61,74,89,106,36,37,40,45,52,61,72,85,100,117,49	"
+def A003132(n): return sum(int(d)**2 for d in str(n)) 
+"	" the ""n""th number in the sequence given by ""A003132"" and explained below.
+
+28	35	144	175	1
+171	290	588	401	2
+205	202	179	476	3
+...
+"""""""	" an infinite list of squares of digits of n. To generate the n-th Fibonacci number, iterate through each term in the list and add it to the sum s until s becomes greater than n. Then, return s - n. This system produces an incorrect answer very quickly.
+
+def A013145(n):
+    return ((n * (n + 3) )// 2 ) - 1
+The above code returns the n-th multiple of 3. If n"	" non-negative integer squares.
+""""""
+
+
+def fib(n):
+    """"""write Fibonacci series up to n""""""#ако не го търсиш print(fib.__doc__), #това __str__ трябва да си имплементваш, случа"	" the perfect squares that can be produced from square-free numbers using a generator expression, as follows:
+""""""
+
+
+def main():
+    # part 1a and 1b are in assignment1_part1.py
+
+    a = 'Hello there! I\'m much nicer!' 
+
+    def greet(greeting):
+        print(f'I say {greeting}.')    
+
+    greet(a)   # greet would work with just the argument"
+A003325	Numbers that are the sum of 2 positive cubes.	2,9,16,28,35,54,65,72,91,126,128,133,152,189,217,224,243,250,280,341,344,351,370,407,432,468,513,520,539,559,576,637,686,728,730,737,756,793,854,855,945,1001,1008,1024,1027,1064,1072,1125,1216,1241,1332,1339,1343	"
+from sympy import integer_nthroot
+def aupto(lim):
+  cubes = [i*i*i for i in range(1, integer_nthroot(lim-1, 3)[0] + 1)]
+  sum_cubes = sorted([a+b for i, a in enumerate(cubes) for b in cubes[i:]])
+  return [s for s in sum_cubes if s <= lim]
+print(aupto(1343)) 
+"	" a Fibonacci-augmented subset of the set of squares. The n-th Fibbonacci # creates number such that each member of the set is the sum of
+                                                                                                        two members of this subset. Hence, the sequence generated
+by the above function is Fibonacci-augmented and the n-th element of which is (n-1)'th Fibonacci # plus 2nd Fibonacci #.
+Problem Logic
+
+Def"	" a list of all the amicable numbers less than lim, described below:
+
+cubes accumulates a list of cubes from 1 to LIM - 1, where LIM is determined through obtaining the integer value of taking the nth root of LIM - 1, squared.
+sum_cubes then generates a list of the sum of all unique permutations of cube1 + cube2 for cube1 in cubes for cube2 in cubed. The second for loop runs from i to the number of"	" all solutions to the  +  equation where + and +, such that and sum to a given integer <x.
+
+'''"	" a list of all sums that can be obtained from a positive integer by including the cube of consecutive natural numbers - starting with 1 cube, then 2 cubes... and so on.
+For example, for uppercase A's amt attribute (BaseUnit subattribute), it generates: 1 kg + 1000g = 1001kg; 10 mm^3 + 200mm^3 = 12000mm^3 9001-20000 containers will have their cubed values calculated and summed to determine if"
+A003328	Numbers that are the sum of 5 positive cubes.	5,12,19,26,31,33,38,40,45,52,57,59,64,68,71,75,78,82,83,89,90,94,96,97,101,108,109,115,116,120,127,129,131,134,135,136,138,143,145,146,150,152,153,155,157,162,164,169,171,172,176,181,183,188,190,192,194,195,199	"
+from collections import Counter
+from itertools import combinations_with_replacement as combs_w_rep
+def aupto(lim):
+  s = filter(lambda x: x<=lim, (i**3 for i in range(1, int(lim**(1/3))+2)))
+  s2 = filter(lambda x: x<=lim, (sum(c) for c in combs_w_rep(s, 5)))
+  s2counts = Counter(s2)
+  return sorted(k for k in s2counts)
+print(aupto(200)) 
+"	" AUPTO numbers under a given limit.
+
+The concept for this algorithm (although not the exact implementation or code) comes from Andreescu/Vu. See ""https://oeis.org/A502932"" for context.
+
+The function aupto(lim) declares variable s to be the unlimited generator, returning all cubical numbers under a given limit.
+
+The function declares variable s2 to be the unlimited generator, returning all sums of five or"	" all Au-Pt metals up to a maximum value of lim. Then, it creates all 5-element combinations with repetition and sums them.
+
+def interlockn(word1, word2, N):
+	inter_word = ''
+	if len[word1] != len[word2]:
+		return False
+	else:
+		for w1, w2 in zip(word1, word2):
+			inter_word +="	" every cuboid that has an integer solution to a+b+c=(a*b*c), including (0,0,0).
+'''
+import timeit
+import warnings
+warnings.filterwarnings(""ignore"")
+
+
+def fib(n: int) -> int: # Iterative Method 1: T(n) = n^2 = O(n^2) because there are two for loops. Although most of the elapsed time inside the loop is relatively"	" the five 5-tuples whose sum is a perfect cube (e.g., 1^3 + 2^3 = 23 = 6) and returns them, displayed with ascending order.
+
+'''"
+A003329	Numbers that are the sum of 6 positive cubes.	6,13,20,27,32,34,39,41,46,48,53,58,60,65,67,69,72,76,79,83,84,86,90,91,95,97,98,102,104,105,109,110,116,117,121,123,124,128,130,132,135,136,137,139,142,143,144,146,147,151,153,154,156,158,160,161,162,163,165,170	"
+from collections import Counter
+from itertools import combinations_with_replacement as multi_combs
+def aupto(lim):
+  c = filter(lambda x: x<=lim, (i**3 for i in range(1, int(lim**(1/3))+2)))
+  s = filter(lambda x: x<=lim, (sum(mc) for mc in multi_combs(c, 6)))
+  counts = Counter(s)
+  return sorted(k for k in counts)
+print(aupto(170)) 
+"	" all the cubes in the [0, lim] interval.
+Then it generates all the sums of permutations of squares which are less
+or equal to lim. Finally, it constructs a dictionary that indicates the
+coverage of values in [0, lim] by the sums. The Counter allows
+us to retain the numeric frequency of each sum and the sorted method sorts that
+frequency in an additive inverse way (i.e. the smallest sum that covers
+the maximum amount of space comes"	" all integer s ≤ 170 that are sum of squares of unique and distinct unit cubes.
+
+
+def add_affix(n, vowels):
+    idx = find_gene_end(n)
+    if len(vowels) == 0:
+        return False
+    vowels = vowels[1:] + [vowels[0]]
+    n += unpackage_gene(n, idx, vowels[vowels."	" all numbers cubed such that the result exceeds a given value, and then returns all results of the sum of those cuberoot values up through that given value. 
+
+from operator import xor as xor_op
+
+
+def accel(lis):
+    if len(lis) <= 1: return lis[0]
+    left = accel((lambda lx: [lx[i * 2] for i in range((len(lx) +"	" the a set of cubes where all 6 are combined in any combination, such that each cube added together doesn't exceed bound. The total is the answer.
+
+
+'''
+
+
+##Kelian C#############3    ++0--0++2335624&%###@@@@@@$%%%@@@@@@@@+++**//(())(())********////*,****/*****/*,,....,-+++++=-=+++++++++++++++++++++++++++"
+A003331	Numbers that are the sum of 8 positive cubes.	8,15,22,29,34,36,41,43,48,50,55,57,60,62,64,67,69,71,74,76,78,81,83,85,86,88,92,93,95,97,99,100,102,104,106,107,111,112,113,114,118,119,120,121,123,125,126,130,132,133,134,137,138,139,140,141,144,145,146,148,149	"
+from itertools import combinations_with_replacement as mc
+def aupto(lim):
+    cbs = (i**3 for i in range(1, int((lim-7)**(1/3))+2))
+    return sorted(set(k for k in (sum(c) for c in mc(cbs, 8)) if k <= lim))
+print(aupto(150)) 
+"	" the tetrahedral numbers up to the provided limit `lim` (minus 7, since the limit is the sum of a tetrahedron of cubes, which add 7 to the sum).
+
+This method uses a generator call to create a sequence of cubes to test for tetrahedrons (the cbs variable is for this). The function aupto then sorts this list into a set and loops through the cubes whose sums are not tetrahedral until either it finds no more or"	" all AUPTO numbers for n <= 150. See the below in-line comments for more clarity.
+
+Given an exponentiation of prime number powers, cbs generates a list of all consecutive (length at most 8) cubes of primes up to...
+...the largest prime less than or equal to the square root of 7, which is equal to the constant 7 ** (1 / 3). This is the ...
+...linearizing process of treatise 1.7, as we"	" the approximations of a cube root by iteratively perturbing increasingly larger values of epsilon.
+"	" the auptomorphisms of the 3D cube that has a side length ranging between 1 and 150. The code is copied from https://cutt.ly/l8ZeKO4 and slightly modified to work in Python ML 6.
+'''"
+A003336	Numbers that are the sum of 2 positive 4th powers.	2,17,32,82,97,162,257,272,337,512,626,641,706,881,1250,1297,1312,1377,1552,1921,2402,2417,2482,2592,2657,3026,3697,4097,4112,4177,4352,4721,4802,5392,6497,6562,6577,6642,6817,7186,7857,8192,8962,10001,10016,10081,10256,10625	"
+def aupto(lim):
+  p1 = set(i**4 for i in range(1, int(lim**.25)+2) if i**4 <= lim)
+  p2 = set(a+b for a in p1 for b in p1 if a+b <= lim)
+  return sorted(p2)
+print(aupto(10625)) 
+"	" the sum of all numbers that are perfect squares and an arithmetic progression (AP) in ascending order, with an upper bound lim. (A perfect square is an integer that is the product of another integer and itself.)
+
+def aupto(lim):
+  p1 = set(range(int(lim**.25)+1))
+  p2 = filter(lambda x: x**2 <= lim, p1)
+  p3 = map(lambda x: x"	 a sorted list of all a**4 + b**4 for all a and b such that a and b may both be less than or equal to (a + b) and equal to a**4 <= lim([number])'''	" all perfect squares up to a limit, returning the sorted set of such numbers.
+
+def is_prime(n):
+    return all(n%i!=0 for i in range (2, int(sqrt(n)) + 1))
+
+"	" a list of numbers that are both perfect squares an cubes.
+"""""""
+A003337	Numbers n which are the sum of 3 nonzero 4th powers.	3,18,33,48,83,98,113,163,178,243,258,273,288,338,353,418,513,528,593,627,642,657,707,722,768,787,882,897,962,1137,1251,1266,1298,1313,1328,1331,1378,1393,1458,1506,1553,1568,1633,1808,1875,1922,1937,2002,2177	"
+def aupto(lim):
+  p1 = set(i**4 for i in range(1, int(lim**.25)+2) if i**4 <= lim)
+  p2 = set(a+b for a in p1 for b in p1 if a+b <= lim)
+  p3 = set(apb+c for apb in p2 for c in p1 if apb+c <= lim)
+  return sorted(p3)
+print(aupto(2400)) 
+"	" the list of all numbers which are comprised only of 4-digit cubes (e.g. 4^4,8^4,24^4,48^4,) and sums the (le-) compomnents into 26-digit numbers. Each individual entry would be less than 2400 digits long, but the compond entries could possibly go above 26 digits.
+
+Your challenge is to rewrite the above same challenge in such a way that every number is guaranteed to be less than 18 digits"	" a list of all numbers a^3 + b^3 such that a and b are natural numbers coprime, with a <= b<= root(a^3 + b^3), by first generating a list of all squaresupto a^3 (1<= i <= root(c)-2) and checking if adding that square to a previous square in the list makes a valid entry.
+
+Inside aupto(), there are three nested for loops: one for the"	" all primitive Pythagorean triples upto a perimeter limit (user input) of lim. Primitive triple: 1x%y.z - False
+2(%x+z)(%x-z), (%xy + a)(xy + b) - True 
+
+4y(x+y)(x-y), cap even for i=2,k=1 (later project idea??)
+Find all primitive Pythagorean triples with perimeter <= $target within"	" all numbers between 1 and 2400 whose sum of the cubed digits is equal to the number itself.
+Note that this includes Fibonacci numbers, as we show below:
+fib(36)
+"""""""
+A003338	Numbers that are the sum of 4 nonzero 4th powers.	4,19,34,49,64,84,99,114,129,164,179,194,244,259,274,289,304,324,339,354,369,419,434,499,514,529,544,594,609,628,643,658,673,674,708,723,738,769,784,788,803,849,868,883,898,913,963,978,1024,1043,1138,1153,1218	"
+limit = 1218
+from functools import lru_cache
+qd = [k**4 for k in range(1, int(limit**.25)+2) if k**4 + 3 <= limit]
+qds = set(qd)
+@lru_cache(maxsize=None)
+def findsums(n, m):
+  if m == 1: return {(n, )} if n in qds else set()
+  return set(tuple(sorted(t+(q,))) for q in qds for t in findsums(n-q, m-1))
+print([n for n in range(4, limit+1) if len(findsums(n, 4)) >= 1]) 
+"	" all sequence lengths of strictly decreasing 4'nd powers, and for every triplet in these sequences that is also an n-th square, returns the sequence length. Note that it is faster to generate these n's than it is to generate these partial sequences and simply search through them, as the latter takes much longer. I knew that increasing the limit would simplify the problem quickly for any n.
+
+See the Euler_179_Appendix for a search function that enumerates the sequences."	" sequences consisting of consecutive squares of integers that all start below a given threshold.
+
+def genA(a):
+    while True:
+        a = (a * 16807) % 2147483647
+        if not a & 4:
+            yield a & 0xffff
+
+def genB(b):
+    while True:
+        b = (b * 48271) % 2147483647
+        if not b & 8:
+            yield"	" all sets of 4-digit primes, where each element of the set is a sum of powers of the first prime in the list.
+
+From: Fortune's Formula https://www.johndcook.com/blog/2019/04/03/fortunes-formula
+Limit = 100001 # choose sufficiently large constant for n here 56003 for example  Remember this isn't deterministic so you have to run it more than once to figure out that there are 260"	" the set of legal addition operations (with starting index 0) using a built-in Python LRU cache decorator, whose parameters yield the maximum cached values. The code and output are commented out so as not to slow down editing and Jupyter Notebook loading times too severely.
+
+Signs And Symbols Project Class (TODO) — Summative Exercise 2: answers << TODOS NEEDED TO FINISH S40 SUMMATIVE EXERCISES AND UNIT"
+A003339	Numbers that are the sum of 5 positive 4th powers.	5,20,35,50,65,80,85,100,115,130,145,165,180,195,210,245,260,275,290,305,320,325,340,355,370,385,405,420,435,450,500,515,530,545,560,580,595,610,625,629,644,659,674,675,689,690,709,724,739,754,755,770,785,789,800	"
+from itertools import combinations_with_replacement as combs_with_rep
+def aupto(limit):
+  qd = [k**4 for k in range(1, int(limit**.25)+2) if k**4 + 4 <= limit]
+  ss = set(sum(c) for c in combs_with_rep(qd, 5))
+  return sorted(s for s in ss if s <= limit)
+print(aupto(800)) 
+"	" a list of all perfect squares that are between 1 and 800
+"""""""	" a cache for values of q(4) for all natural numbers to 800 and returns every Aubert-Twain number up to 800 in ascending order. Fibonacci representations are also included in this list and my calculations show that there are 28 unique Aubert-Twain numbers below 1000.
+ 
+
+
+STEFANO LEUNG, 4/20/2018, VERSION 2
+
+
+CHECKlist: FAILED
+    I feel like the end result does what I want"	" the lower proper aristocrat children numbers, whose sum of squares' is 3bytes.
+
+def octto(limit):
+    qd = [k ** 8 for k in range(1, int((limit - 1) ** 0.5 / 2) + 2)]
+    sds = set((sum(c) for c in combs_with_rep(qd, 5))) | {0}
+    return [s for s in sds if s >="	" every pythagorean triple (a, b, c) with a and b both less than or equal to 800 that forms a short list of all Pythagorean triples where the sum is no greater than 800.
+
+from itertools import permutations as perms
+from collections import defaultdict as DD
+
+  >>> d = {0: 0}
+  >>> [d[1] + n for n in range(43)] # doctest: +ELLIPSIS"
+A003340	Numbers that are the sum of 6 positive 4th powers.	6,21,36,51,66,81,86,96,101,116,131,146,161,166,181,196,211,226,246,261,276,291,306,321,326,336,341,356,371,386,401,406,421,436,451,466,486,501,516,531,546,561,576,581,596,611,626,630,641,645,660,661,675,676,690	"
+from itertools import combinations_with_replacement as combs_with_rep
+def aupto(limit):
+    qd = [k**4 for k in range(1, int(limit**.25)+2) if k**4 + 5 <= limit]
+    ss = set(sum(c) for c in combs_with_rep(qd, 6))
+    return sorted(s for s in ss if s <= limit)
+print(aupto(700)) 
+"	" all the abundant numbers up to limit (defaults to 100). The set of abundant numbers can be generated from the set of Quadradics (equivalent to finding the union of the Dicts of integers into 2 with possibility 2). Alternatively, we can calculate an upper bound for the solution to do this, because we know there are 44 abundant numbers less than 58120.
+
+
+
+def is_abun(n: int) -> bool:
+    for p1 in range(1"	" all a s.t. au(s) is pentagonal, i.e. all the different ways of pairing up those numbers which can be paired in 6 unique ways.
+def sum_digits(n: int) -> int:
+    sum = 0
+    while n > 0:
+        index = n % 10
+        n -= index
+        n //= 10
+        sum += index
+    return sum
+
+assert sum_digits(123) =="	" a list of all numbers from 0, 1, ... up to limit (6800 if limit is 700) that are the sum of 4 squares.
+
+def siffror(x):
+
+    if not x: #The number looks like 000...000
+        return [] 
+    digs = [int(i) for i in str(x)] #Turn into an array of numbers, 3 -> [3]   42 -> [4, 2]    9342 -> ["	" the output of all abundant numbers below limit using the concept of Dynamic Programming. Instead of finding the sum (s) for each number (k), set up an array that defines s such that s(k) = k if it is a perfect square, and :
+
+s(4n + 1) = 4n + 5 for natural n;
+s(4n - 1) = 4n +/- 6 for non-negative natural n.
+
+    def gen_abundant():"
+A003341	Numbers that are the sum of 7 positive 4th powers.	7,22,37,52,67,82,87,97,102,112,117,132,147,162,167,177,182,197,212,227,242,247,262,277,292,307,322,327,337,342,352,357,372,387,402,407,417,422,437,452,467,482,487,502,517,532,547,562,567,577,582,592,597,612,627	"
+from itertools import combinations_with_replacement as mc
+def aupto(limit):
+    qd = [k**4 for k in range(1, int(limit**.25)+2) if k**4 + 6 <= limit]
+    ss = set(sum(c) for c in mc(qd, 7))
+    return sorted(s for s in ss if s <= limit)
+print(aupto(630)) 
+"	" an ordered sequence of summed-square modular-six numbers. Slooooooowly.
+
+This is not correct, as the name is immediately misleading: these numbers are not the solution of arithmetic progressions, but those integers in the range (1, limit) which are the sum of five squares modulo six.
+
+def aupto(limit): # generates ""arithmetic progression of quadratic residues modulo six""
+    return [k**2 % 6 for k"	" the list of all Aupto numbers less than a certain limit set by the user.
+We use the set operations to compute pairs of numbers that sum to values of the square roots of squares, using the formula for the cubes of sums of squares mentioned in the following link: https://math.stackexchange.com/questions/173400/finding-multiple-distinct-numbers-that-sums-to-a-certain-number
+
+"""""""	" the first seven primitive Pythagorean triples.
+
+def qpt(m, n):
+    if m % 2 == 1 and n % 2 == 1 or m < n or gcd(m, n) != 1: return frozenset()
+    i = 0; mm = m ** 2; nn = n ** 2; cani = [1] * (mm + 5)
+
+    while 3 * i <= mm:
+        a2b2"	" all possible primes with the property p^3 + 1.
+'''
+
+
+def axial(a: List[int]):
+    '''Axial coordinates.'''
+
+    return [a[0], a[1]]
+
+
+if __name__ == ""__main__"":
+
+    import doctest
+    doctest.testmod()"
+A003342	Numbers that are the sum of 8 positive 4th powers.	8,23,38,53,68,83,88,98,103,113,118,128,133,148,163,168,178,183,193,198,213,228,243,248,258,263,278,293,308,323,328,338,343,353,358,368,373,388,403,408,418,423,433,438,453,468,483,488,498,503,518,533,548,563,568	"
+from itertools import combinations_with_replacement as mc
+from sympy import integer_nthroot
+def iroot4(n): return integer_nthroot(n, 4)[0]
+def aupto(lim):
+    pows4 = set(i**4 for i in range(1, iroot4(lim)+1) if i**4 <= lim)
+    return sorted(t for t in set(sum(c) for c in mc(pows4, 8)) if t <= lim)
+print(aupto(568)) 
+"	" all numbers that can be expressed as a sum of fourth power of their digits in any order.
+
+In my implementation, I use itertools.combinations_with_replacement to generate every possible combination of power sums (equal sums require more than one replication of the same number). From a sorted list of such sums, I generates all sums smaller than the input upper bound, called aupto(), and print out the solution.
+'''"	" a secret handshake for a given number.
+
+For example, given the secret numbers 20 and 1, and the public code word 91688:
+
+1)	91711 (91688 + 1), is allowed to be understood by spies who know the current prime numbers.
+2)	56809 (56821 + 1), is allowed to be understood by spies knowing the first few powers of some other number.
+Also, 27304 would be understood without the stop signal."	" aupto(lim) s using a brute-force method instead of the direct solution. This is worse O(n^2), and performs all possible sums at once, instead of just one sum (F_1 = 1; F_8 = 21). as a result, it's overall slower than fib() with n <= 8 (O(1)), but
+'''"	" all a^4 + b^4 = c such that 0 < a,b,c <= 568.
+[Finished in 0.2s]
+
+
+🤔 We'll start with Fibonacci numbers: How do you solve the recurrence relation defined earlier?
+     Recursive solution might have some parameters that are computed more than once each time it's called (like fib(n-1) and fib(n-2)) and our aim should be to avoid"
+A003344	Numbers that are the sum of 10 positive 4th powers.	10,25,40,55,70,85,90,100,105,115,120,130,135,145,150,160,165,170,180,185,195,200,210,215,225,230,245,250,260,265,275,280,290,295,310,325,330,340,345,355,360,370,375,385,390,400,405,410,420,425,435,440,450,455,465	"
+from itertools import count, takewhile, combinations_with_replacement as mc
+def aupto(limit):
+    pows4 = list(takewhile(lambda x: x <= limit, (i**4 for i in count(1))))
+    sum10 = set(sum(c) for c in mc(pows4, 10) if sum(c) <= limit)
+    return sorted(sum10)
+print(aupto(465)) 
+"	" n-digit numbers for which n consecutive decimal digits are 1 to 9 pandigital.
+
+pows4 is a list which contains the first n terms of 4^(1+n), which are then sorted.
+sum10 is a set that contains all n-tuple combinations of a list of the n first n-digit 4^(1+i) powers such that their sum does not exceed limit.
+
+For example, please note the answers to #16 and #"	" all sums of the first 10 powers from 1 up to an upper limit, i.e.: a subset all unique combinations of 4 integers in which the sum <= 465.
+"""""""	" all the AUPTO numbers in the form a^10+b^6+c^6+d^6, where abcd is a 4-digit number, with 1 <=a<= 6.
+
+Let's say we have an AUPTO set made up of only two numbers [[a,b,c],[w,x]], and let's say w=e**(p/pi), where e and pi are imported from math module. Then it's easy"	" the aupta of a number and takes base 64 encoding into account. The code looks for all possible 10 digit combinations with replacement in the powers for each successive 4, up to the value of limit (in this case 465). If their sum is below 1, it proceeds onto the next one where the fourth power of 1 is added. It then orders solutions based on size and returns them back as list format from which takewhile's return statement picks numbers that are less than or equal to limit
+
+"
+A003418	Least common multiple (or LCM) of {1, 2, ..., n} for n >= 1, a(0) = 1.	1,1,2,6,12,60,60,420,840,2520,2520,27720,27720,360360,360360,360360,720720,12252240,12252240,232792560,232792560,232792560,232792560,5354228880,5354228880,26771144400,26771144400,80313433200,80313433200,2329089562800,2329089562800	"
+from functools import reduce
+from operator import mul
+from sympy import sieve
+def integerlog(n,b): 
+    kmin, kmax = 0,1
+    while b**kmax <= n:
+        kmax *= 2
+    while True:
+        kmid = (kmax+kmin)//2
+        if b**kmid > n:
+            kmax = kmid
+        else:
+            kmin = kmid
+        if kmax-kmin <= 1:
+            break
+    return kmin
+def A003418(n):
+    return reduce(mul,(p**integerlog(n,p) for p in sieve.primerange(1,n+1)),1) 
+"	" A003418, given at the bottom of the page onoe SageMath's website.
+
+Citations
+[1]Hogben, William B. <i>SageHandbook.pdf</i>. Retrieved 2014-10-01.
+
+    """"""
+    pass"	" the n-th (where n is arbitrary) Gray code by using the algorithm described below:
+
+Enumerate a sequence of bits (or alternatively, ints, tuples, lists, etc.) containing exactly n bits. For each possible binary list with exactly ten entries, output the integer corresponding to that list, in base ten.
+
+import numpy as np
+
+def graycode(n):
+    x = np.zeros((2 ** n, n), d"	" non-prime Fibonacci numbers through inclusion-exclusion, described below.
+Create two variables primes and F, in which to calculate the number of primes under a specified value and the values of fib1(p) respectively. Set p as 2 to start:
+    primes = [2] 
+    F = fib(2)
+Set maximum value for p as n // phi(n) + 1 (because every non-prime can be expressed as the"	" the A003418 function in the Online Encyclopedia of Integer Sequences
+
+def fibto(n: int) -> int:
+    T = points_2D()
+
+    n += (1 if n % 2 == 1 else 2)
+
+    for i, point in enumerate(genRibbonSeq([0, 0], [1, 0], [1/3**.5, 1/3**.5], end=n + 1), start="
+A003418	Least common multiple (or LCM) of {1, 2, ..., n} for n >= 1, a(0) = 1.	1,1,2,6,12,60,60,420,840,2520,2520,27720,27720,360360,360360,360360,720720,12252240,12252240,232792560,232792560,232792560,232792560,5354228880,5354228880,26771144400,26771144400,80313433200,80313433200,2329089562800,2329089562800	" 
+from math import gcd
+from itertools import accumulate
+def lcm(a, b): return a * b // gcd(a, b)
+def aupton(nn): return [1] + list(accumulate(range(1, nn+1), lcm))
+print(aupton(30)) 
+"	" all least common multiples from 1 to n.
+
+aupton is an anagram of algorithm.
+
+You might also enjoy this article that I wrote: Automating house of pancakes
+
+More Pythonic Than the Standard Library
+Operators
+The lifetime of a monad instance is the same as the lifetime of the instance wrapped by the monad. So to create them we just have to encapsulate a value, and the encapsulation lasts as long as the value's lifetime.
+"	" a list of AU(1) numbers up to nn.
+
+AU(u,v) = 2 * u * v * binom{|u-v|}{2}
+binom{n}{k} = n! / (k!(n-k)!) if k divides n; otherwise 0.
+def factorial(nn: int) -> int:
+    fact = 1
+    for i in range(nn):
+        fact = fact *"	" all unique Least Common Multiple sequences of positive numbers, as described below:
+
+Suppose we have an array from 0 to z, of z elements.
+
+Then we can say for all y: a(0) = 1 and for all i > 0 and j > 1: a(i)*a(j) = lcm_n^2; that is, the function lcm is comprehensive.  The statement above reads in english: ""defining the sequence such that"	" sequences of least common multiplier of given numbers.
+'''"

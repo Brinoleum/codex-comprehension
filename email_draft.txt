@@ -1,0 +1,10 @@
+Hello,
+
+My name is Brian Chu and I am currently working on my senior thesis project with Dr. Richard Futrell from the language sciences department. I'm currently looking for help with processing math-related data, and I was wondering if you would be willing to lend a hand.
+
+For context, my project entails taking descriptions of integer sequences from OEIS, as well as corresponding code samples that generate said code, and evaluating how well the GPT language model can translate the code back into an English-language description. However, I've scraped roughly 6800 sequences and I would like to rate how well GPT is able to translate each sequence under different parameters. This is a fairly time-consuming process and I'm not as familiar with some of the math involved in the sequences, so I'd like to split up the work with people who do know more about these things.
+
+If you or your students would be wiling to help me out, please let me know.
+
+Thanks,
+Brian Chu
